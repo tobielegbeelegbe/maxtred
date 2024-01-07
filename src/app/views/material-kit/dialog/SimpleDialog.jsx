@@ -1,20 +1,20 @@
-import AddIcon from '@mui/icons-material/Add';
-import PersonIcon from '@mui/icons-material/Person';
-import { Box } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import { blue } from '@mui/material/colors';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
-import { useState } from 'react';
+import AddIcon from "@mui/icons-material/Add";
+import PersonIcon from "@mui/icons-material/Person";
+import { Box } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import { blue } from "@mui/material/colors";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-const emails = ['username@gmail.com', 'user02@gmail.com'];
+const emails = ["username@gmail.com", "user02@gmail.com"];
 
 function SimpleDialog(props) {
   const { onClose, selectedValue, ...other } = props;
@@ -41,7 +41,7 @@ function SimpleDialog(props) {
           </ListItem>
         ))}
 
-        <ListItem button onClick={() => handleListItemClick('addAccount')}>
+        <ListItem button onClick={() => handleListItemClick("addAccount")}>
           <ListItemAvatar>
             <Avatar>
               <AddIcon />
@@ -62,7 +62,7 @@ SimpleDialog.propTypes = {
 
 export default function SimpleDialogDemo() {
   const [open, setOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState('user02@gmail.com');
+  const [selectedValue, setSelectedValue] = useState("user02@gmail.com");
 
   const handleClickOpen = () => setOpen(true);
 

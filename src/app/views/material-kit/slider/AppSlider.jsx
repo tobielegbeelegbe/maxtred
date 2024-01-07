@@ -1,5 +1,4 @@
-import { Stack } from "@mui/material";
-import { Box, styled } from "@mui/system";
+import { Box, Stack, styled } from "@mui/material";
 import { Breadcrumb, SimpleCard } from "app/components";
 import ContinuousSlider from "./ContinuousSlider";
 import DiscreteSlider from "./DiscreteSlider";

@@ -1,4 +1,4 @@
-import ReactEcharts from 'echarts-for-react';
+import ReactEcharts from "echarts-for-react";
 
 const option = {
   grid: {
@@ -7,21 +7,23 @@ const option = {
     right: 0,
     bottom: 0,
   },
+  legend: {},
+  tooltip: {},
   xAxis: {
     show: false,
-    type: 'category',
+    type: "category",
     showGrid: false,
     boundaryGap: false,
   },
   yAxis: {
     show: false,
-    type: 'value',
+    type: "value",
     splitLine: { show: false },
   },
   series: [
     {
       data: [25, 18, 20, 30, 40, 43],
-      type: 'line',
+      type: "line",
       areaStyle: {},
       smooth: true,
     },

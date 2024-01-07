@@ -1,18 +1,17 @@
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { Autocomplete, Grid, TextField, Typography } from '@mui/material';
-import { useTheme } from '@mui/system';
-import parse from 'autosuggest-highlight/parse';
-import throttle from 'lodash/throttle';
-import React from 'react';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Autocomplete, Grid, TextField, Typography, useTheme } from "@mui/material";
+import parse from "autosuggest-highlight/parse";
+import throttle from "lodash/throttle";
+import React from "react";
 
 function loadScript(src, position, id) {
   if (!position) {
     return;
   }
 
-  const script = document.createElement('script');
-  script.setAttribute('async', '');
-  script.setAttribute('id', id);
+  const script = document.createElement("script");
+  script.setAttribute("async", "");
+  script.setAttribute("id", id);
   script.src = src;
   position.appendChild(script);
 }
@@ -20,16 +19,16 @@ const autocompleteService = { current: null };
 
 export default function LocationAutocomplete() {
   const theme = useTheme();
-  const [inputValue, setInputValue] = React.useState('');
+  const [inputValue, setInputValue] = React.useState("");
   const [options, setOptions] = React.useState([]);
   const loaded = React.useRef(false);
 
-  if (typeof window !== 'undefined' && !loaded.current) {
-    if (!document.querySelector('#google-maps')) {
+  if (typeof window !== "undefined" && !loaded.current) {
+    if (!document.querySelector("#google-maps")) {
       loadScript(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwRp1e12ec1vOTtGiA4fcCt2sCUS78UYc&libraries=places',
-        document.querySelector('head'),
-        'google-maps'
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyBwRp1e12ec1vOTtGiA4fcCt2sCUS78UYc&libraries=places",
+        document.querySelector("head"),
+        "google-maps"
       );
     }
 
@@ -58,7 +57,7 @@ export default function LocationAutocomplete() {
       return undefined;
     }
 
-    if (inputValue === '') {
+    if (inputValue === "") {
       setOptions([]);
       return undefined;
     }
@@ -78,19 +77,19 @@ export default function LocationAutocomplete() {
     <Autocomplete
       id="google-map-demo"
       style={{ width: 300 }}
-      getOptionLabel={(option) => (typeof option === 'string' ? option : option.description)}
+      getOptionLabel={(option) => (typeof option === "string" ? option : option.description)}
       filterOptions={(x) => x}
       options={options}
+      freeSolo
       autoComplete
       includeInputInList
-      freeSolo
       disableOpenOnFocus
       renderInput={(params) => (
         <TextField
-          {...params}
-          label="Add a location"
-          variant="outlined"
           fullWidth
+          {...params}
+          variant="outlined"
+          label="Add a location"
           onChange={handleChange}
         />
       )}
@@ -113,12 +112,7 @@ export default function LocationAutocomplete() {
             </Grid>
             <Grid item xs>
               {parts.map((part, index) => (
-                <span
-                  key={index}
-                  style={{
-                    fontWeight: part.highlight ? 700 : 400,
-                  }}
-                >
+                <span key={index} style={{ fontWeight: part.highlight ? 700 : 400 }}>
                   {part.text}
                 </span>
               ))}

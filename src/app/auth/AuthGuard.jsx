@@ -1,7 +1,5 @@
-import useAuth from 'app/hooks/useAuth';
-// import { flat } from 'app/utils/utils';
-import { Navigate, useLocation } from 'react-router-dom';
-// import AllPages from '../routes';
+import useAuth from "app/hooks/useAuth";
+import { Navigate, useLocation } from "react-router-dom";
 
 // const userHasPermission = (pathname, user, routes) => {
 //   if (!user) {
@@ -15,13 +13,9 @@ import { Navigate, useLocation } from 'react-router-dom';
 // };
 
 const AuthGuard = ({ children }) => {
-  let {
-    isAuthenticated,
-    // user
-  } = useAuth();
   const { pathname } = useLocation();
-
-  //   const routes = flat(AllPages);
+  const { isAuthenticated } = useAuth();
+  // const flatRoutes = flat(routes);
 
   //   const hasPermission = userHasPermission(pathname, user, routes);
   //   let authenticated = isAuthenticated && hasPermission;
@@ -30,17 +24,9 @@ const AuthGuard = ({ children }) => {
   // // UNCOMMENT ABOVE LINES
   // // AND COMMENT OUT BELOW authenticated VARIABLE
 
-  let authenticated = isAuthenticated;
+  if (isAuthenticated) return <>{children}</>;
 
-  return (
-    <>
-      {authenticated ? (
-        children
-      ) : (
-        <Navigate replace to="/session/signin" state={{ from: pathname }} />
-      )}
-    </>
-  );
+  return <Navigate replace to="/session/signin" state={{ from: pathname }} />;
 };
 
 export default AuthGuard;

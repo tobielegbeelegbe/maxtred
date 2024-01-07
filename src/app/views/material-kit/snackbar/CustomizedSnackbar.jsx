@@ -1,6 +1,5 @@
-import { Alert, Button, Snackbar } from "@mui/material";
+import { Alert, Button, Snackbar, styled } from "@mui/material";
 import { amber, green } from "@mui/material/colors";
-import { styled } from "@mui/system";
 import React from "react";
 
 const ContentRoot = styled("div")(({ theme }) => ({

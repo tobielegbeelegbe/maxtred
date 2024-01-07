@@ -1,17 +1,17 @@
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-import Favorite from '@mui/icons-material/Favorite';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-import { styled } from '@mui/material';
-import Checkbox from '@mui/material/Checkbox';
-import { green } from '@mui/material/colors';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormGroup from '@mui/material/FormGroup';
-import React from 'react';
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import { styled } from "@mui/material";
+import Checkbox from "@mui/material/Checkbox";
+import { green } from "@mui/material/colors";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormGroup from "@mui/material/FormGroup";
+import React from "react";
 
 const GreenCheckbox = styled(Checkbox)(() => ({
   color: green[400],
-  '&$checked': {
+  "&$checked": {
     color: green[600],
   },
 }));
@@ -32,7 +32,7 @@ export default function LabelledCheckbox() {
     <FormGroup row>
       <FormControlLabel
         control={
-          <Checkbox checked={state.checkedA} onChange={handleChange('checkedA')} value="checkedA" />
+          <Checkbox checked={state.checkedA} onChange={handleChange("checkedA")} value="checkedA" />
         }
         label="Secondary"
       />
@@ -40,7 +40,7 @@ export default function LabelledCheckbox() {
         control={
           <Checkbox
             checked={state.checkedB}
-            onChange={handleChange('checkedB')}
+            onChange={handleChange("checkedB")}
             value="checkedB"
             color="primary"
           />
@@ -54,7 +54,7 @@ export default function LabelledCheckbox() {
         control={
           <Checkbox
             checked={state.checkedF}
-            onChange={handleChange('checkedF')}
+            onChange={handleChange("checkedF")}
             value="checkedF"
             indeterminate
           />
@@ -66,7 +66,7 @@ export default function LabelledCheckbox() {
           <GreenCheckbox
             color="default"
             checked={state.checkedG}
-            onChange={handleChange('checkedG')}
+            onChange={handleChange("checkedG")}
             value="checkedG"
           />
         }

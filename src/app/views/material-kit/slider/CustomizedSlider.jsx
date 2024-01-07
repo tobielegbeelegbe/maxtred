@@ -1,5 +1,4 @@
-import { Paper, Slider, Tooltip, Typography } from "@mui/material";
-import { styled } from "@mui/system";
+import { Paper, Slider, styled, Tooltip, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import React from "react";
 

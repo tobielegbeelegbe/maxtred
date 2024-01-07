@@ -1,9 +1,8 @@
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import { green } from "@mui/material/colors";
 import Radio from "@mui/material/Radio";
-import { styled } from "@mui/system";
 import React from "react";
 
 const GreenRadio = styled(Radio)(() => ({

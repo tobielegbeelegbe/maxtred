@@ -1,56 +1,47 @@
 // *https://www.registers.service.gov.uk/registers/country/use-the-api*
-import { Autocomplete, CircularProgress, styled, TextField } from '@mui/material';
-import fetch from 'cross-fetch';
-import React from 'react';
+import { useState, useEffect, Fragment } from "react";
+import { Autocomplete, CircularProgress, TextField } from "@mui/material";
 
-const AutoComplete = styled(Autocomplete)(() => ({ width: 300 }));
+const API_URL = "https://restcountries.com/v3.1/all?fields=name";
 
 function sleep(delay = 0) {
   return new Promise((resolve) => setTimeout(resolve, delay));
 }
 
 export default function AsyncAutocomplete() {
-  const [open, setOpen] = React.useState(false);
-  const [options, setOptions] = React.useState([]);
-  const loading = open && options.length === 0;
+  const [open, setOpen] = useState(false);
+  const [options, setOptions] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  React.useEffect(() => {
-    let active = true;
-
-    if (!loading) {
-      return undefined;
-    }
+  useEffect(() => {
+    setLoading(true);
 
     (async () => {
-      const response = await fetch('https://country.register.gov.uk/records.json?page-size=5000');
-      await sleep(3000); // For demo purposes.
+      const response = await fetch(API_URL);
       const countries = await response.json();
+      const first_20 = countries.slice(0, 20);
 
-      if (active) {
-        setOptions(Object.keys(countries).map((key) => countries[key].item[0]));
-      }
+      const updatedList = first_20.reduce(
+        (prev, curr) => [...prev, { name: curr.name.common }],
+        []
+      );
+
+      await sleep(3000); // For demo purposes.
+      setOptions(updatedList);
+      setLoading(false);
     })();
-
-    return () => {
-      active = false;
-    };
-  }, [loading]);
-
-  React.useEffect(() => {
-    if (!open) {
-      setOptions([]);
-    }
-  }, [open]);
+  }, []);
 
   return (
-    <AutoComplete
+    <Autocomplete
       open={open}
       options={options}
-      loading={loading}
+      // loading={loading}
       id="asynchronous-demo"
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
       getOptionLabel={(option) => option.name}
+      sx={{ width: 300 }}
       renderInput={(params) => (
         <TextField
           {...params}
@@ -60,10 +51,10 @@ export default function AsyncAutocomplete() {
           InputProps={{
             ...params.InputProps,
             endAdornment: (
-              <React.Fragment>
+              <Fragment>
                 {loading ? <CircularProgress color="inherit" size={20} /> : null}
                 {params.InputProps.endAdornment}
-              </React.Fragment>
+              </Fragment>
             ),
           }}
         />

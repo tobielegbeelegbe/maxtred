@@ -1,33 +1,33 @@
-import { AppBar, Button, ThemeProvider, Toolbar } from '@mui/material';
-import { styled, useTheme } from '@mui/system';
-import useSettings from 'app/hooks/useSettings';
-import { topBarHeight } from 'app/utils/constant';
-import { Paragraph, Span } from './Typography';
+import { AppBar, Button, styled, ThemeProvider, Toolbar, useTheme } from "@mui/material";
+import useSettings from "app/hooks/useSettings";
+import { topBarHeight } from "app/utils/constant";
+import { Paragraph, Span } from "./Typography";
 
-const AppFooter = styled(Toolbar)(() => ({
-  display: 'flex',
-  alignItems: 'center',
+// styled components
+const AppFooter = styled(Toolbar)({
+  display: "flex",
+  alignItems: "center",
   minHeight: topBarHeight,
-  '@media (max-width: 499px)': {
-    display: 'table',
-    width: '100%',
-    minHeight: 'auto',
-    padding: '1rem 0',
-    '& .container': {
-      flexDirection: 'column !important',
-      '& a': { margin: '0 0 16px !important' },
+  "@media (max-width: 499px)": {
+    width: "100%",
+    display: "table",
+    minHeight: "auto",
+    padding: "1rem 0",
+    "& .container": {
+      flexDirection: "column !important",
+      "& a": { margin: "0 0 16px !important" },
     },
   },
-}));
+});
 
-const FooterContent = styled('div')(() => ({
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  padding: '0px 1rem',
-  maxWidth: '1170px',
-  margin: '0 auto',
-}));
+const FooterContent = styled("div")({
+  width: "100%",
+  display: "flex",
+  margin: "0 auto",
+  maxWidth: "1170px",
+  padding: "0px 1rem",
+  alignItems: "center",
+});
 
 const Footer = () => {
   const theme = useTheme();
@@ -45,8 +45,10 @@ const Footer = () => {
                 Get MatX Pro
               </Button>
             </a>
-            <Span sx={{ m: 'auto' }}></Span>
-            <Paragraph sx={{ m: 0 }}>
+
+            <Span sx={{ m: "auto" }} />
+
+            <Paragraph sx={{ m: 0 }} className="sfsdfsdf">
               Design and Developed by <a href="http://ui-lib.com">UI Lib</a>
             </Paragraph>
           </FooterContent>

@@ -1,12 +1,12 @@
-import Checkbox from '@mui/material/Checkbox';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormGroup from '@mui/material/FormGroup';
-import FormLabel from '@mui/material/FormLabel';
-import React from 'react';
+import Checkbox from "@mui/material/Checkbox";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormGroup from "@mui/material/FormGroup";
+import FormLabel from "@mui/material/FormLabel";
+import React from "react";
 
 function PlacingCheckboxLabel() {
-  const [value, setValue] = React.useState('female');
+  const [value, setValue] = React.useState("female");
 
   const handleChange = (event) => {
     setValue(event.target.value);

@@ -1,17 +1,17 @@
-import { Grid, LinearProgress, Typography } from '@mui/material';
-import { styled, useTheme } from '@mui/system';
-import { Small } from './Typography';
+import { Grid, LinearProgress, styled, Typography, useTheme } from "@mui/material";
+import React from "react";
+import { Small } from "./Typography";
 
 const CustomLinearProgress = styled(LinearProgress)(() => ({
   borderRadius: 2,
-  background: 'rgba(0, 0, 0, 0.1)',
+  background: "rgba(0, 0, 0, 0.1)",
 }));
 
 const MatxProgressBar = ({
+  text = "",
   value = 75,
-  color = 'primary',
-  text = '',
   spacing = 2,
+  color = "primary",
   coloredText = false,
 }) => {
   const theme = useTheme();
@@ -20,16 +20,13 @@ const MatxProgressBar = ({
   return (
     <Grid container spacing={spacing} alignItems="center">
       <Grid item xs={text ? 8 : 12}>
-        <CustomLinearProgress
-          color={color}
-          value={value}
-          variant="determinate"
-        ></CustomLinearProgress>
+        <CustomLinearProgress color={color} value={value} variant="determinate" />
       </Grid>
-      {text !== '' && (
+
+      {text !== "" && (
         <Grid item xs={text ? 4 : false}>
           <Typography color={color}>
-            <Small sx={{ color: coloredText ? '' : secondary }}>{text}</Small>
+            <Small sx={{ color: coloredText ? "" : secondary }}>{text}</Small>
           </Typography>
         </Grid>
       )}

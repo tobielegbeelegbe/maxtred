@@ -1,6 +1,5 @@
 import CloseIcon from "@mui/icons-material/Close";
-import { Box, Button, IconButton, Snackbar } from "@mui/material";
-import { styled } from "@mui/system";
+import { Box, Button, IconButton, Snackbar, styled } from "@mui/material";
 import { useState } from "react";
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
