@@ -8,48 +8,49 @@ export const navigations = [
     auth: authRoles.sa, // ONLY SUPER ADMIN(SA) CAN ACCESS
   },
   {
-    name: "Analytics",
+    name: "Projects",
     path: "/dashboard/analytics",
     icon: "analytics",
     auth: authRoles.admin, // ONLY SUPER ADMIN(SA) AND ADMIN CAN ACCESS
   },
 
   {
-    name: "Analytics 2",
+    name: "Assets",
     path: "/dashboard/analytics-2",
     icon: "analytics",
   },
 
   {
-    name: "Alternative",
+    name: "Budgets",
     path: "/dashboard/alternative",
     icon: "analytics",
   },
   {
-    name: "Inventory Management",
+    name: "Products",
     path: "/dashboard/inventory-management",
     icon: "store",
   },
   {
-    name: "Sales",
+    name: "Roads",
     path: "/dashboard/sales",
     icon: "store",
   },
   {
-    name: "Learning Management",
+    name: "Reports",
     path: "/dashboard/learning-management",
     icon: "store",
   },
 
-  { label: "Pages", type: "label" },
+  { label: "Manage", type: "label" },
 
   {
-    name: "Customers",
+    name: "Projects",
     icon: "people",
     children: [
-      { name: "Customer List", path: "/pages/customer-list", iconText: "CL" },
-      { name: "View Customer", path: "/pages/view-customer", iconText: "VC" },
-      { name: "New Customer", path: "/pages/new-customer", iconText: "NC" },
+      { name: "Project List", path: "/pages/user-list-1", iconText: "U1" },
+      { name: "User List 2", path: "/pages/user-list-2", iconText: "U2" },
+      { name: "User List 3", path: "/pages/user-list-3", iconText: "U3" },
+      { name: "User List 4", path: "/pages/user-list-4", iconText: "U3" },
     ],
   },
   {
@@ -69,6 +70,16 @@ export const navigations = [
       { name: "View Order", path: "/invoice/fdskfjdsuoiucrwevbgd", iconText: "VO" },
     ],
   },
+  
+  {
+    name: "Users",
+    icon: "people",
+    children: [
+      { name: "User List", path: "/pages/customer-list", iconText: "CL" },
+      { name: "Project Leaders", path: "/pages/view-customer", iconText: "VC" },
+      { name: "New User", path: "/pages/new-customer", iconText: "NC" },
+    ],
+  },
   {
     name: "Help Center",
     icon: "help",
@@ -86,16 +97,6 @@ export const navigations = [
       { name: "Pricing 2", iconText: "P2", path: "/others/pricing-2" },
       { name: "Pricing 3", iconText: "P3", path: "/others/pricing-3" },
       { name: "Pricing 4", iconText: "P4", path: "/others/pricing-4" },
-    ],
-  },
-  {
-    name: "User List",
-    icon: "people",
-    children: [
-      { name: "User List 1", path: "/pages/user-list-1", iconText: "U1" },
-      { name: "User List 2", path: "/pages/user-list-2", iconText: "U2" },
-      { name: "User List 3", path: "/pages/user-list-3", iconText: "U3" },
-      { name: "User List 4", path: "/pages/user-list-4", iconText: "U3" },
     ],
   },
   {

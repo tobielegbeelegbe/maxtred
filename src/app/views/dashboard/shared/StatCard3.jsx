@@ -6,22 +6,22 @@ const StatCard3 = () => {
     {
       icon: "people",
       amount: 10495,
-      title: "New Members",
+      title: "New Projects",
     },
     {
       icon: "location_on_outlined",
-      amount: 30942,
-      title: "Places added",
+      amount: 300942,
+      title: "Total Budget",
     },
     {
       icon: "keyboard_voice",
       amount: 45269,
-      title: "Support Members",
+      title: "Total Assets",
     },
     {
       icon: "card_giftcard",
       amount: 20965,
-      title: "Tags Used",
+      title: "Total Incidents",
     },
   ];
   const { palette } = useTheme();

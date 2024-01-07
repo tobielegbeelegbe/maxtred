@@ -136,7 +136,7 @@ const Analytics3 = () => {
       <Grid container spacing={3}>
         <Grid sx={{ mt: 4 }} item xs={12}>
           <H3 sx={{ fontSize: "1.25rem" }}>
-            Most <Span color="primary.main">Recent Media</Span>
+            Most <Span color="primary.main">Recent Projects</Span>
           </H3>
         </Grid>
 
@@ -172,7 +172,7 @@ const Analytics3 = () => {
       <Grid item xs={12} mt={4}>
         <Card>
           <ChartHeader>
-            <H3>Follower Growth</H3>
+            <H3>Project Growth</H3>
 
             <IconButton>
               <Icon color="text.primary">more_horiz</Icon>
@@ -185,7 +185,7 @@ const Analytics3 = () => {
                 4,829
               </H1>
               <Paragraph mb="20px" color="grey.main">
-                Gained Followers (last 360 days)
+                New Projects (last 360 days)
               </Paragraph>
 
               <TextBox my="10px" icon_color={colorSecondary}>
@@ -204,7 +204,7 @@ const Analytics3 = () => {
                 <Span sx={{ mx: "4px" }} color="primary.main">
                   10%
                 </Span>
-                <Span>of your follower goal</Span>
+                <Span>of your Project goals</Span>
               </TextBox>
             </Box>
 
@@ -216,62 +216,6 @@ const Analytics3 = () => {
               />
             </Box>
           </FollowerBox>
-        </Card>
-      </Grid>
-
-      <Grid container spacing={3} mt={2}>
-        {topCardData.map((data, index) => (
-          <Grid key={index} item md={3} sm={6} xs={12}>
-            <StyledCard
-              bgcolor={data.bgColor}
-              textcolor={data.color}
-              sx={{ "& .icon": { width: 50, height: 35, borderRadius: "5px" } }}
-            >
-              <Icon className="icon">{data.icon}</Icon>
-
-              <Box mb="24px" mt="20px" textAlign="center">
-                <H1>{data.title}</H1>
-
-                <Paragraph sx={{ fontSize: ".6875rem", color: textMuted }}>
-                  {data.subTitle}
-                </Paragraph>
-              </Box>
-
-              <StyledButton
-                variant="contained"
-                bgcolor={data.bgColor}
-                textcolor={data.color}
-                sx={{ borderRadius: "5px" }}
-              >
-                <Icon>{data.arrowIcon}</Icon>
-                {data.percent}%
-              </StyledButton>
-            </StyledCard>
-          </Grid>
-        ))}
-      </Grid>
-
-      <Grid item xs={12} mt={4}>
-        <Card>
-          <ChartHeader mb={2}>
-            <H3>Reach Impression History</H3>
-
-            <IconButton>
-              <MoreHoriz sx={{ color: textPrimary }} />
-            </IconButton>
-          </ChartHeader>
-
-          <AdvanceAreaChart
-            chartData={[
-              { name: "Series 1", data: [20, 90, 20, 90, 20, 90, 20] },
-              { name: "Series 2", data: [90, 20, 90, 20, 90, 20, 90] },
-            ]}
-            colors={[
-              `rgba(${convertHexToRGB(palette.primary.main)}, 0.4)`,
-              `rgba(${convertHexToRGB(palette.text.secondary)}, 0.3)`,
-            ]}
-            height={380}
-          />
         </Card>
       </Grid>
 
@@ -413,7 +357,7 @@ const topCardData = [
   {
     icon: "people",
     title: "30.2K",
-    subTitle: "Total Followers",
+    subTitle: "Total Projects",
     percent: 12.6,
     arrowIcon: "arrow_drop_down",
     bgColor: "rgba(0,129,255,.17)",
@@ -422,7 +366,7 @@ const topCardData = [
   {
     icon: "touch_app",
     title: "9.2K",
-    subTitle: "Impressions",
+    subTitle: "New Projects",
     percent: 58.6,
     arrowIcon: "arrow_drop_up",
     bgColor: "rgba(9,182,109,.17)",
@@ -431,7 +375,7 @@ const topCardData = [
   {
     icon: "wifi_tethering",
     title: "1.2K",
-    subTitle: "Connect",
+    subTitle: "Open Projects",
     percent: "05.6",
     arrowIcon: "arrow_drop_down",
     bgColor: "rgba(255,61,87,.17)",
@@ -440,7 +384,7 @@ const topCardData = [
   {
     icon: "rate_review",
     title: "18.2K",
-    subTitle: "Rate Review",
+    subTitle: "Completed Projects",
     percent: "05.6",
     arrowIcon: "arrow_drop_up",
     bgColor: "rgba(94,92,230,.17)",

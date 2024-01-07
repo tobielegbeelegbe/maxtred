@@ -11,10 +11,10 @@ const StyledCard = styled(Card)(() => ({
 
 const StatCard4 = () => {
   const statList = [
-    { icon: "colorize", amount: 48, title: "New Posts" },
-    { icon: "attachment", amount: 291, title: "Attached Files" },
-    { icon: "mode_comment", amount: 291, title: "Comments" },
-    { icon: "remove_red_eye", amount: 110, title: "Total Views" },
+    { icon: "colorize", amount: 48, title: "New Incidents" },
+    { icon: "attachment", amount: 291, title: "Uploaded Files" },
+    { icon: "mode_comment", amount: 291, title: "Messages" },
+    { icon: "remove_red_eye", amount: 110, title: "Total Updates" },
   ];
 
   return (

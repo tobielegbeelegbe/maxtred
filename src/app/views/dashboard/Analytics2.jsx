@@ -18,7 +18,7 @@ const Analytics2 = () => {
   return (
     <AnalyticsRoot>
       <FlexBetween mb={2}>
-        <H3 sx={{ m: 0 }}>Overview</H3>
+        <H3 sx={{ m: 0 }}>EasyPro Overview</H3>
         <TextField defaultValue="1" variant="outlined" size="small" select>
           <MenuItem value="1">This Month</MenuItem>
           <MenuItem value="2">Last Month</MenuItem>
