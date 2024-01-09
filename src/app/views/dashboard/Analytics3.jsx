@@ -3,7 +3,6 @@ import { Box, Button, Card, Grid, Icon, IconButton, styled, useTheme, MenuItem, 
 import { FlexBetween, FlexBox } from "app/components/FlexBox";
 import { H1, H3, Paragraph, Span } from "app/components/Typography";
 import { convertHexToRGB } from "app/utils/utils";
-import AdvanceAreaChart from "./shared/AdvanceAreaChart";
 import AdvanceLineChart from "./shared/AdvanceLineChart";
 import AdvanceLineChart2 from "./shared/AdvanceLineChart2";
 import HeatmapChart from "./shared/HeatmapChart";

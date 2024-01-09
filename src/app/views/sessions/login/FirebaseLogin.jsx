@@ -6,7 +6,7 @@ import { LoadingButton } from "@mui/lab";
 import { useSnackbar } from "notistack";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { MatxDivider, MatxLogo } from "app/components";
+import { MatxDivider } from "app/components";
 import { FlexAlignCenter, FlexBox } from "app/components/FlexBox";
 import { Paragraph, Span } from "app/components/Typography";
 import useAuth from "app/hooks/useAuth";
@@ -105,7 +105,7 @@ const FirebaseLogin = () => {
       setLoading(false);
     }
   };
-
+  const IMG = styled("img")({ height: 32 });
   return (
     <FirebaseRoot>
       <Card className="card">
@@ -113,15 +113,17 @@ const FirebaseLogin = () => {
           <Grid item sm={6} xs={12}>
             <div className="cardLeft">
               <Logo>
-                <MatxLogo /> <span>MatX Pro</span>
+              <IMG alt="company-logo" src="/assets/images/logo.png" /> <span>Easy Pro</span>
               </Logo>
 
               <h1 className="mainTitle">Admin Dashboard</h1>
 
               <div className="features">
                 <div className="item">JWT, Firebase & Auth0 Authentication</div>
-                <div className="item">Clean & Organised code</div>
-                <div className="item">Limitless Pages & Components</div>
+                <div className="item">Aligned with IDMS</div>
+                <div className="item">Powerful Progeject Management System</div>
+                <div className="item">Strict control setup of user permissions </div>
+                <div className="item">Single source for all project information</div>
               </div>
 
               <Span sx={{ flexGrow: 1 }}></Span>

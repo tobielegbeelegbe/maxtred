@@ -95,7 +95,7 @@ function ShoppingCart({ container }) {
     <Fragment>
       <IconButton onClick={handleDrawerToggle}>
         <Badge color="secondary" badgeContent={cart.length}>
-          <Icon sx={{ color: "text.primary" }}>shopping_cart</Icon>
+          <Icon sx={{ color: "text.primary" }}>error</Icon>
         </Badge>
       </IconButton>
 
@@ -110,8 +110,8 @@ function ShoppingCart({ container }) {
         >
           <MiniCart>
             <CartBox>
-              <Icon color="primary">shopping_cart</Icon>
-              <h5>Cart</h5>
+              <Icon color="primary">error</Icon>
+              <h5>New Incidents</h5>
             </CartBox>
 
             <Box flexGrow={1} overflow="auto">

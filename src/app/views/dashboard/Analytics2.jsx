@@ -9,7 +9,7 @@ import GaugeProgressCard from "./shared/GuageProgressCard";
 import StatCard3 from "./shared/StatCard3";
 import StatCard4 from "./shared/StatCard4";
 import {Box} from "@mui/material";
-import { Breadcrumb, MatxProgressBar } from "app/components";
+import { Breadcrumb } from "app/components";
 
 const AnalyticsRoot = styled("div")(({ theme }) => ({
   margin: "30px",

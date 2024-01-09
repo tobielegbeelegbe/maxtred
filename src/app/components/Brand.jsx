@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 import useSettings from "app/hooks/useSettings";
 import { FlexBetween } from "./FlexBox";
-import MatxLogo from "./MatxLogo";
+
 import { Span } from "./Typography";
 
 const BrandRoot = styled(FlexBetween)(() => ({
@@ -13,6 +13,13 @@ const StyledSpan = styled(Span)(({ mode }) => ({
   display: mode === "compact" ? "none" : "block",
 }));
 
+const MatxLogo = styled("div")({
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+});
+
+const IMG = styled("img")({ height: 32 });
 const Brand = ({ children }) => {
   const { settings } = useSettings();
   const leftSidebar = settings.layout1Settings.leftSidebar;
@@ -21,10 +28,13 @@ const Brand = ({ children }) => {
   return (
     <BrandRoot>
       <Box gap={1} display="flex" alignItems="center">
-        <MatxLogo />
+      <MatxLogo>
+          <IMG alt="company-logo" src="/assets/images/logo.png" />
+          
+        </MatxLogo>
 
         <StyledSpan mode={mode} className="sidenavHoverShow">
-          Matx
+          EasyPro
         </StyledSpan>
       </Box>
 
