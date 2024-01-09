@@ -13,9 +13,9 @@ const FollowerCard2 = () => {
   return (
     <Card sx={{ p: 2 }} elevation={3}>
       <FlexBetween>
-        <H4 sx={{ m: 0 }}>One Else Graph</H4>
+        <H4 sx={{ m: 0 }}>Budgets Progress</H4>
         <Box display="flex" alignItems="center">
-          <H4 sx={{ m: 0 }}>429K</H4>
+          <H4 sx={{ m: 0 }}>$429K</H4>
           <Box ml={1} textAlign="center">
             <Icon size="small" color="primary" sx={{ mt: -1, display: "block" }}>
               arrow_drop_up

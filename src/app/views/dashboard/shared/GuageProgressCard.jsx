@@ -51,7 +51,7 @@ const GaugeProgressCard = () => {
   return (
     <Card sx={{ height: "100%" }} elevation={3}>
       <CardHeader>
-        <Span sx={{ fontWeight: "500", color: "text.secondary" }}>STATISTICS</Span>
+        <Span sx={{ fontWeight: "500", color: "text.secondary" }}>INCIDENTS STATISTICS</Span>
 
         <IconButton size="small">
           <Icon>more_horiz</Icon>
@@ -59,7 +59,7 @@ const GaugeProgressCard = () => {
       </CardHeader>
 
       <Box position="relative" mt={3}>
-        <Chart options={options} series={[84.2]} type="radialBar" height={200} />
+        <Chart options={options} series={[7.42]} type="radialBar" height={200} />
         <Icon
           sx={{
             fontSize: "36px",
@@ -76,7 +76,7 @@ const GaugeProgressCard = () => {
       <H5 sx={{ mb: 1, textAlign: "center", fontWeight: "500" }}>Awesome</H5>
 
       <Paragraph sx={{ mb: 3, textAlign: "center", color: "text.secondary" }}>
-        Close to reach 1000k folowers!
+         80k Resolved Incidents!
       </Paragraph>
     </Card>
   );

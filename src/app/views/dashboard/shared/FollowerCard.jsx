@@ -14,7 +14,7 @@ const FollowerCard = () => {
   return (
     <Card sx={{ p: 2, mb: 3 }} elevation={3}>
       <FlexBetween>
-        <H4 sx={{ m: 0 }}>Followers</H4>
+        <H4 sx={{ m: 0 }}>Projects</H4>
 
         <Box display="flex" alignItems="center">
           <H4 sx={{ m: 0 }}>860K</H4>

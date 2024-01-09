@@ -1,5 +1,5 @@
 import { ArrowDropDown, ArrowDropUp, MoreHoriz } from "@mui/icons-material";
-import { Box, Button, Card, Grid, Icon, IconButton, styled, useTheme } from "@mui/material";
+import { Box, Button, Card, Grid, Icon, IconButton, styled, useTheme, MenuItem, TextField} from "@mui/material";
 import { FlexBetween, FlexBox } from "app/components/FlexBox";
 import { H1, H3, Paragraph, Span } from "app/components/Typography";
 import { convertHexToRGB } from "app/utils/utils";
@@ -7,7 +7,7 @@ import AdvanceAreaChart from "./shared/AdvanceAreaChart";
 import AdvanceLineChart from "./shared/AdvanceLineChart";
 import AdvanceLineChart2 from "./shared/AdvanceLineChart2";
 import HeatmapChart from "./shared/HeatmapChart";
-
+import { Breadcrumb } from "app/components";
 // styled components
 const AnalyticsRoot = styled("div")(({ theme }) => ({
   margin: 30,
@@ -101,6 +101,8 @@ const TextBox = styled(FlexBox)(({ theme, icon_color }) => ({
   },
 }));
 
+const routes = [{ name: "Dashboard", path: "/dashboard" }, { name: "Projects" }];
+
 const Analytics3 = () => {
   const { palette } = useTheme();
   const colorPrimary = palette.primary.main;
@@ -111,6 +113,18 @@ const Analytics3 = () => {
 
   return (
     <AnalyticsRoot>
+    <Box mb={3}>
+        <Breadcrumb routeSegments={routes} />
+      </Box>
+      <FlexBetween mb={2}>
+        <H3 sx={{ m: 0 }}>Projects Overview</H3>
+        <TextField defaultValue="1" variant="outlined" size="small" select>
+          <MenuItem value="1">This Month</MenuItem>
+          <MenuItem value="2">Last Month</MenuItem>
+          <MenuItem value="3">Six Month</MenuItem>
+          <MenuItem value="4">Last Year</MenuItem>
+        </TextField>
+      </FlexBetween>
       <Grid container spacing={3}>
         {topCardData.map((data, index) => (
           <Grid key={index} item md={3} sm={6} xs={12}>

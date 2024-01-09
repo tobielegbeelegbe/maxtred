@@ -11,16 +11,16 @@ const StatCard3 = () => {
     {
       icon: "location_on_outlined",
       amount: 300942,
-      title: "Total Budget",
+      title: "Adjusted Budget",
     },
     {
       icon: "keyboard_voice",
       amount: 45269,
-      title: "Total Assets",
+      title: "New Assets",
     },
     {
       icon: "card_giftcard",
-      amount: 20965,
+      amount: 74265,
       title: "Total Incidents",
     },
   ];

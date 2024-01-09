@@ -8,15 +8,22 @@ import FollowerCard2 from "./shared/FollowerCard2";
 import GaugeProgressCard from "./shared/GuageProgressCard";
 import StatCard3 from "./shared/StatCard3";
 import StatCard4 from "./shared/StatCard4";
+import {Box} from "@mui/material";
+import { Breadcrumb, MatxProgressBar } from "app/components";
 
 const AnalyticsRoot = styled("div")(({ theme }) => ({
   margin: "30px",
   [theme.breakpoints.down("sm")]: { margin: "16px" },
 }));
 
+const routes = [{ name: "Dashboard", path: "/dashboard" }];
+
 const Analytics2 = () => {
   return (
     <AnalyticsRoot>
+    <Box mb={3}>
+        <Breadcrumb routeSegments={routes} />
+      </Box>
       <FlexBetween mb={2}>
         <H3 sx={{ m: 0 }}>EasyPro Overview</H3>
         <TextField defaultValue="1" variant="outlined" size="small" select>
