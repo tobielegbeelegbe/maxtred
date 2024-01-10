@@ -33,22 +33,22 @@ const DashboardWelcomeCard = () => {
         <TrendingUp />
       </Fab>
 
-      <WelcomeBox mt={3}>Welcome back! Watson</WelcomeBox>
+      <WelcomeBox mt={3}>Welcome back! Jason</WelcomeBox>
 
       <FlexBetween margin="auto" maxWidth={400} fontWeight={300} gap={2} p={4}>
         <TextBox>
-          <Paragraph className="title">180</Paragraph>
-          <Paragraph>sales</Paragraph>
+          <Paragraph className="title" >58000</Paragraph>
+          <Paragraph>Assets</Paragraph>
         </TextBox>
 
         <TextBox>
-          <Paragraph className="title">220</Paragraph>
-          <p>signups</p>
+          <Paragraph className="title" color={"green"}>40220</Paragraph>
+          <p>Open</p>
         </TextBox>
 
         <TextBox>
-          <Paragraph className="title">300</Paragraph>
-          <Paragraph>visitors</Paragraph>
+          <Paragraph className="title" color={"red"}>10300</Paragraph>
+          <Paragraph>Closed</Paragraph>
         </TextBox>
       </FlexBetween>
     </CardRoot>

@@ -116,7 +116,7 @@ const Analytics3 = () => {
         <Breadcrumb routeSegments={routes} />
       </Box>
       <FlexBetween mb={2}>
-        <H3 sx={{ m: 0 }}>Projects Overview</H3>
+        <H3 sx={{ m: 0 }} color={colorPrimary}>Projects Overview</H3>
         <TextField defaultValue="1" variant="outlined" size="small" select>
           <MenuItem value="1">This Month</MenuItem>
           <MenuItem value="2">Last Month</MenuItem>
@@ -154,7 +154,7 @@ const Analytics3 = () => {
         </Grid>
 
         {mostRecentMedia.map((data, index) => {
-          const { like, comment, uploadDate, imgUrl } = data;
+          const { Text, uploadDate, imgUrl } = data;
 
           return (
             <Grid key={index} item lg={3} sm={6} xs={12}>
@@ -164,15 +164,14 @@ const Analytics3 = () => {
                   <FlexBox
                     alignItems="center"
                     sx={{
-                      "& span": { fontSize: "16px" },
+                      "& span": { fontSize: "12px" },
                       "& .icon": { mx: "4px", color: textMuted },
                     }}
                   >
-                    <Icon className="icon">favorite</Icon>
-                    <Span mr={1}>{like}</Span>
+                    
+                    <Span mr={1}>{Text}</Span>
 
-                    <Icon className="icon">chat</Icon>
-                    <Span>{comment}</Span>
+                
                   </FlexBox>
                   <Paragraph>{uploadDate}</Paragraph>
                 </ContentBox>
@@ -256,7 +255,7 @@ const Analytics3 = () => {
         <Grid item md={6} xs={12}>
           <Card sx={{ pb: 2 }}>
             <ChartHeader mb={2}>
-              <H3>Like history</H3>
+              <H3>Timeline history</H3>
 
               <IconButton>
                 <MoreHoriz sx={{ color: textPrimary }} />
@@ -267,8 +266,8 @@ const Analytics3 = () => {
               height={350}
               colors={[textError, textMuted]}
               chartData={[
-                { name: "Like", data: [40, 80, 20, 90, 30, 80, 40, 90, 130] },
-                { name: "Average like per day", data: [40, 60, 10, 70, 50, 90, 70, 60, 80] },
+                { name: "Timeline", data: [40, 80, 20, 90, 30, 80, 40, 90, 130] },
+                { name: "Budget", data: [40, 60, 10, 70, 50, 90, 70, 60, 80] },
               ]}
             />
           </Card>
@@ -277,7 +276,7 @@ const Analytics3 = () => {
         <Grid item md={6} xs={12}>
           <Card sx={{ pb: 2 }}>
             <ChartHeader mb={2}>
-              <H3>Comments History</H3>
+              <H3>Project History</H3>
 
               <IconButton>
                 <MoreHoriz sx={{ color: textPrimary }} />
@@ -288,8 +287,8 @@ const Analytics3 = () => {
               height={350}
               colors={["#08ad6c", textMuted]}
               chartData={[
-                { name: "Comments", data: [40, 80, 20, 90, 30, 80, 40, 90, 130] },
-                { name: "Average comments per day", data: [40, 60, 10, 70, 50, 90, 70, 60, 80] },
+                { name: "Project", data: [40, 80, 20, 90, 30, 80, 40, 90, 130] },
+                { name: "Completion Date", data: [40, 60, 10, 70, 50, 90, 70, 60, 80] },
               ]}
             />
           </Card>
@@ -442,27 +441,23 @@ const sealsReportData = [
 
 const mostRecentMedia = [
   {
-    like: "2.3K",
-    comment: 900,
-    uploadDate: "23 days ago",
+    Text: "Housing Project",
+    uploadDate: "3 days",
     imgUrl: "/assets/images/sq-10.jpg",
   },
   {
-    like: "2.3K",
-    comment: 900,
-    uploadDate: "23 days ago",
+    Text: "Power Project",
+    uploadDate: "10 days",
     imgUrl: "/assets/images/sq-11.jpg",
   },
   {
-    like: "2.3K",
-    comment: 900,
-    uploadDate: "23 days ago",
+    Text: "Development Project",
+    uploadDate: "13 days",
     imgUrl: "/assets/images/sq-12.jpg",
   },
   {
-    like: "2.3K",
-    comment: 900,
-    uploadDate: "23 days ago",
+    Text: "Redesign Project",
+    uploadDate: "23 days",
     imgUrl: "/assets/images/sq-13.jpg",
   },
 ];

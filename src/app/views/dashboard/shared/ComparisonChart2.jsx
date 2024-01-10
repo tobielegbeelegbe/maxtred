@@ -26,7 +26,7 @@ const ComparisonChart2 = ({ height }) => {
     tooltip: {},
     dataset: {
       source: [
-        ["Month", "Projects", "Budgets", "Assets", "Users"],
+        ["Month", "Projects", "Programs", "Assets", "Users"],
         ["Jan", 2200, 1200, 950, 800],
         ["Feb", 800, 500, 1500, 600],
         ["Mar", 700, 1350, 800, 700],

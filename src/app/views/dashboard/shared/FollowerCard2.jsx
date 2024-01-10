@@ -15,7 +15,7 @@ const FollowerCard2 = () => {
       <FlexBetween>
         <H4 sx={{ m: 0 }}>Budgets Progress</H4>
         <Box display="flex" alignItems="center">
-          <H4 sx={{ m: 0 }}>$429K</H4>
+          <H4 sx={{ m: 0 }}>R429K</H4>
           <Box ml={1} textAlign="center">
             <Icon size="small" color="primary" sx={{ mt: -1, display: "block" }}>
               arrow_drop_up
@@ -27,7 +27,7 @@ const FollowerCard2 = () => {
         </Box>
       </FlexBetween>
 
-      <Small sx={{ color: textMuted }}>System project</Small>
+      <Small sx={{ color: textMuted }}>Total project</Small>
 
       <ModifiedAreaChart
         height="100%"

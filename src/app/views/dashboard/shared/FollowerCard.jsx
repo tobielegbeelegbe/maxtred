@@ -17,7 +17,7 @@ const FollowerCard = () => {
         <H4 sx={{ m: 0 }}>Projects</H4>
 
         <Box display="flex" alignItems="center">
-          <H4 sx={{ m: 0 }}>860K</H4>
+          <H4 sx={{ m: 0 }}>86K</H4>
 
           <Box ml={1} textAlign="center">
             <Icon size="small" color="primary" sx={{ mt: -1, display: "block" }}>

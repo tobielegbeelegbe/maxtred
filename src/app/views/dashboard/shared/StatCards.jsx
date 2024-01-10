@@ -33,10 +33,10 @@ const Heading = styled("h6")(({ theme }) => ({
 }));
 
 const cardList = [
-  { name: "New Leads", amount: 3050, icon: "group" },
-  { name: "This week Sales", amount: "$80,500", icon: "attach_money" },
-  { name: "Inventory Status", amount: "8.5% Stock Surplus", icon: "store" },
-  { name: "Orders to deliver", amount: "305 Orders", icon: "shopping_cart" },
+  { name: "Adjusted Budget", amount: "R 300,500", icon: "group" },
+  { name: "Total Allocated Budget", amount: "R 2,074,500", icon: "attach_money" },
+  { name: "Budget Stats", amount: "85% Budget Used", icon: "store" },
+  { name: "Current Costs", amount: "R 1,820,000", icon: "shopping_cart" },
 ];
 
 const StatCards = () => {
@@ -48,8 +48,8 @@ const StatCards = () => {
             <ContentBox>
               <Icon className="icon">{item.icon}</Icon>
               <Box ml="12px">
-                <Small>{item.name}</Small>
-                <Heading>{item.amount}</Heading>
+                <Small color="Red">{item.name}</Small>
+                <Heading color="green">{item.amount}</Heading>
               </Box>
             </ContentBox>
 

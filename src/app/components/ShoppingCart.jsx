@@ -1,7 +1,7 @@
-import { Clear, KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
+import { Clear } from "@mui/icons-material";
 import { Badge, Box, Button, Drawer, Icon, IconButton, styled, ThemeProvider } from "@mui/material";
 import useSettings from "app/hooks/useSettings";
-import { addToCart, removeFromCart, removeQtyFromCart } from "app/redux/slices/cartSlice";
+import { removeFromCart } from "app/redux/slices/cartSlice";
 import { sideNavWidth, topBarHeight } from "app/utils/constant";
 import { Fragment, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -50,7 +50,7 @@ const ProductDetails = styled(Box)({
   display: "flex",
   flexDirection: "column",
   "& h6": {
-    width: 120,
+    width: 150,
     display: "block",
     overflow: "hidden",
     whiteSpace: "nowrap",
@@ -70,25 +70,14 @@ function ShoppingCart({ container }) {
 
   const handleCheckoutClick = () => {
     setPanelOpen(false);
-    navigate("/ecommerce/checkout");
+    navigate("/dashboard/incidents");
   };
 
   // total cartlist items amount
-  const totalAmount = cart.reduce((prev, curr) => prev + curr.price * curr.qty, 0);
-
+ 
   // remove product from cart handler
   const handleRemoveItem = (productId) => () => {
     dispatch(removeFromCart(productId));
-  };
-
-  // remove quantity from a product
-  const handleQuantityDecrement = (productId) => () => {
-    dispatch(removeQtyFromCart(productId));
-  };
-
-  // add quantity from a product
-  const handleQuantityIncrement = (product) => () => {
-    dispatch(addToCart(product));
   };
 
   return (
@@ -115,37 +104,73 @@ function ShoppingCart({ container }) {
             </CartBox>
 
             <Box flexGrow={1} overflow="auto">
-              {cart.map((product) => (
-                <ProductBox key={product.id}>
-                  <Box display="flex" flexDirection="column">
-                    <StyledIconButton size="small" onClick={handleQuantityIncrement(product)}>
-                      <KeyboardArrowUp sx={{ fontSize: 18 }} />
-                    </StyledIconButton>
+              
+                <ProductBox key="i1">
 
-                    <StyledIconButton
-                      size="small"
-                      disabled={product.amount < 2}
-                      onClick={handleQuantityDecrement(product.id)}
-                    >
-                      <KeyboardArrowDown sx={{ fontSize: 18 }} />
-                    </StyledIconButton>
-                  </Box>
-
-                  <img src={product.imgUrl} alt={product.title} width="50" />
+                  <Icon color="primary">error</Icon>
 
                   <ProductDetails>
-                    <H6>{product.title}</H6>
+                    <H6 color="red">New Incidents Reported </H6>
 
                     <Small color="text.secondary">
-                      ${product.price} x {product.qty}
+                      Project: Pretoria Workers Field
+                    </Small>
+                    <Small color="text.secondary">
+                      Date: Friday 14th
                     </Small>
                   </ProductDetails>
 
-                  <StyledIconButton size="small" onClick={handleRemoveItem(product.id)}>
+                  
+
+                  <StyledIconButton size="small" onClick={handleRemoveItem('i1')}>
                     <Clear sx={{ fontSize: 16 }} />
                   </StyledIconButton>
                 </ProductBox>
-              ))}
+
+                <ProductBox key="i2">
+
+                  <Icon color="primary">error</Icon>
+
+                  <ProductDetails>
+                    <H6 color="red">New Incidents Reported </H6>
+
+                    <Small color="text.secondary">
+                      Project: Dura Road Project
+                    </Small>
+                    <Small color="text.secondary">
+                      Date: Tuesday 24th
+                    </Small>
+                  </ProductDetails>
+
+                  
+
+                  <StyledIconButton size="small" onClick={handleRemoveItem('i2')}>
+                    <Clear sx={{ fontSize: 16 }} />
+                  </StyledIconButton>
+                </ProductBox>
+
+                <ProductBox key="i3">
+
+                  <Icon color="primary">error</Icon>
+
+                  <ProductDetails>
+                    <H6 color="red">New Incidents Reported </H6>
+
+                    <Small color="text.secondary">
+                      Project: Field Area Limpopo
+                    </Small>
+                    <Small color="text.secondary">
+                      Date: Saturday 4th
+                    </Small>
+                  </ProductDetails>
+
+                  
+
+                  <StyledIconButton size="small" onClick={handleRemoveItem('i3')}>
+                    <Clear sx={{ fontSize: 16 }} />
+                  </StyledIconButton>
+                </ProductBox>
+              
             </Box>
 
             <Button
@@ -155,7 +180,7 @@ function ShoppingCart({ container }) {
               disabled={cart.length === 0}
               sx={{ width: "100%", borderRadius: 0 }}
             >
-              Checkout (${totalAmount.toFixed(2)})
+              View All Incidents
             </Button>
           </MiniCart>
         </Drawer>

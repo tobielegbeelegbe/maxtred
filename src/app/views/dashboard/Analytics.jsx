@@ -8,6 +8,9 @@ import StatCards from "./shared/StatCards";
 import StatCards2 from "./shared/StatCards2";
 import TopSellingTable from "./shared/TopSellingTable";
 import UpgradeCard from "./shared/UpgradeCard";
+import { FlexBetween } from "app/components/FlexBox";
+import {H3} from "app/components/Typography";
+import FollowerCard2 from "./shared/FollowerCard2";
 
 const AnalyticsRoot = styled("div")(({ theme }) => ({
   padding: "28px 32px 86px 32px",
@@ -50,7 +53,8 @@ const Analytics = () => {
   return (
     <Fragment>
       <AnalyticsRoot>
-        <Header>Last 12 months sales</Header>
+      
+        <Header>Last 12 months Budget</Header>
         <ModifiedAreaChart
           height="280px"
           option={{
@@ -81,13 +85,12 @@ const Analytics = () => {
             <StatCards />
             <TopSellingTable />
             <StatCards2 />
-            <H4>Ongoing Projects</H4>
-            <RowCards />
+            
           </Grid>
 
           <Grid item md={4} xs={12}>
             <Card sx={{ px: 3, py: 2, mb: 3 }}>
-              <Title>Traffic Sources</Title>
+              <Title>Top Grossing </Title>
               <SubTitle>Last 30 days</SubTitle>
               <DoughnutChart
                 height="300px"
@@ -95,8 +98,8 @@ const Analytics = () => {
               />
             </Card>
 
-            <UpgradeCard />
-            <Campaigns />
+            <FollowerCard2 />
+            
           </Grid>
         </Grid>
       </ContentBox>

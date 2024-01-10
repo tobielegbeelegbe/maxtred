@@ -1,20 +1,17 @@
 import { format } from "date-fns";
-import { DateRange, ExpandLess, MoreVert, StarOutline, TrendingUp } from "@mui/icons-material";
+import { DateRange, ExpandLess, StarOutline, TrendingUp } from "@mui/icons-material";
 import {
-  Avatar,
-  AvatarGroup,
   Box,
   Button,
   Card,
   Checkbox,
   Fab,
   Grid,
-  IconButton,
   useTheme,
 } from "@mui/material";
 import { Breadcrumb, MatxProgressBar } from "app/components";
 import DashboardWelcomeCard from "../cards/DashboardWelcomeCard";
-import { H2, H6, Paragraph } from "app/components/Typography";
+import { H2, H3, H6, Paragraph } from "app/components/Typography";
 import AreaChart from "../charts/echarts/AreaChart";
 import { FlexAlignCenter, FlexBetween, FlexBox } from "app/components/FlexBox";
 import ModifiedAreaChart from "./shared/ModifiedAreaChart";
@@ -22,14 +19,17 @@ import ModifiedAreaChart from "./shared/ModifiedAreaChart";
 const Analytics4 = () => {
   const theme = useTheme();
 
-  const routes = [{ name: "Dashboard", path: "/dashboard" }, { name: "Analytics" }];
+  const routes = [{ name: "Dashboard", path: "/dashboard" }, { name: "Assets" }];
 
   return (
     <Box m={3}>
       <Box mb={3}>
         <Breadcrumb routeSegments={routes} />
       </Box>
-
+      <FlexBetween mb={2}>
+        <H3 sx={{ m: 0 }}>Assets Overview</H3>
+        
+      </FlexBetween>
       <Grid container spacing={3}>
         <Grid item lg={6} md={6} sm={12} xs={12}>
           <DashboardWelcomeCard />
@@ -43,7 +43,7 @@ const Analytics4 = () => {
               </Paragraph>
 
               <Paragraph color="text.secondary" mb={3}>
-                $10345
+                R 1,500,345
               </Paragraph>
 
               <Button variant="contained" color="primary">
@@ -59,7 +59,7 @@ const Analytics4 = () => {
           <Card elevation={3} sx={{ height: "100%" }}>
             <Box px={3} py={2}>
               <Paragraph fontSize={16} fontWeight={500}>
-                Todays Traffic
+                Todays Assets
               </Paragraph>
 
               <Paragraph color="text.secondary" mb={3}>
@@ -77,7 +77,7 @@ const Analytics4 = () => {
 
         <Grid item lg={8} md={8} sm={12} xs={12}>
           <Grid container alignItems="center">
-            <Grid item md={5} xs={7}>
+            <Grid item md={4} xs={7}>
               <FlexBox alignItems="center" px={2}>
                 <Checkbox />
                 <Paragraph lineHeight={1} fontWeight={500} color="text.secondary">
@@ -86,23 +86,29 @@ const Analytics4 = () => {
               </FlexBox>
             </Grid>
 
-            <Grid item md={3} xs={4}>
+            <Grid item md={4} xs={4}>
               <Paragraph fontWeight={500} color="text.secondary">
-                Date
+                Date Created
               </Paragraph>
             </Grid>
 
-            <Grid item xs={4} sx={{ display: { md: "flex", xs: "none" } }}>
+            <Grid item xs={3} sx={{ display: { md: "flex", xs: "none" } }}>
               <Paragraph fontWeight={500} color="text.secondary">
-                Members
+               Current Price
+              </Paragraph>
+            </Grid>
+
+            <Grid item xs={1} sx={{ display: { md: "flex", xs: "none" } }}>
+              <Paragraph fontWeight={500} color="text.secondary">
+               Growth
               </Paragraph>
             </Grid>
           </Grid>
 
-          {[1, 2, 3, 4, 5].map((id) => (
+          {['Gold', 'Bitcoin', 'FGA Stocks', 'Sasol', 'RTY Trade'].map((id) => (
             <Card key={id} sx={{ py: 1, px: 2, mb: 2 }}>
               <Grid container alignItems="center">
-                <Grid item md={5} xs={7}>
+                <Grid item md={4} xs={7}>
                   <FlexBox alignItems="center">
                     <Checkbox />
 
@@ -117,31 +123,23 @@ const Analytics4 = () => {
                     )}
 
                     <Paragraph fontWeight={500} ml={2}>
-                      Project {id}
+                       {id}
                     </Paragraph>
                   </FlexBox>
                 </Grid>
 
-                <Grid item md={3} xs={4}>
+                <Grid item md={4} xs={4}>
                   <Paragraph color="text.secondary">
                     {format(new Date().getTime(), "MM/dd/yyyy hh:mma")}
                   </Paragraph>
                 </Grid>
 
                 <Grid item xs={3} sx={{ display: { md: "flex", xs: "none" } }}>
-                  <AvatarGroup max={4} sx={{ justifyContent: "flex-end" }}>
-                    <Avatar src="/assets/images/face-4.jpg" />
-                    <Avatar src="/assets/images/face-4.jpg" />
-                    <Avatar src="/assets/images/face-4.jpg" />
-                    <Avatar src="/assets/images/face-4.jpg" />
-                    <Avatar src="/assets/images/face-4.jpg" />
-                  </AvatarGroup>
+                  R 200,000
                 </Grid>
 
                 <Grid item xs={1} sx={{ textAlign: "end" }}>
-                  <IconButton>
-                    <MoreVert />
-                  </IconButton>
+                  <H3 color="green">+5%</H3>
                 </Grid>
               </Grid>
             </Card>
@@ -149,7 +147,7 @@ const Analytics4 = () => {
 
           <Card sx={{ p: 3, mt: 4 }}>
             <H6 fontSize={16} mb={2}>
-              Sales
+              Asset Growth
             </H6>
 
             <ModifiedAreaChart
@@ -200,12 +198,12 @@ const Analytics4 = () => {
               </Fab>
 
               <H6 fontSize={16} color="success.main">
-                Active Users
+                Portfolio Profit
               </H6>
             </FlexBox>
 
             <FlexBetween pt={2}>
-              <H2 color="text.secondary">10.8k</H2>
+              <H2 color="text.secondary">R 10.8k</H2>
 
               <FlexBox alignItems="center" gap={1}>
                 <FlexAlignCenter
@@ -230,12 +228,12 @@ const Analytics4 = () => {
               </Fab>
 
               <H6 fontSize={16} color="error.main">
-                Transactions
+                Total Portfolio Amount
               </H6>
             </FlexBox>
 
             <FlexBetween pt={2}>
-              <H2 color="text.secondary">$2.8M</H2>
+              <H2 color="text.secondary">R2.8M</H2>
 
               <FlexBox alignItems="center" gap={1}>
                 <FlexAlignCenter
@@ -258,33 +256,31 @@ const Analytics4 = () => {
               Today
             </H6>
 
-            <MatxProgressBar value={75} color="primary" text="Google (102k)" />
-            <MatxProgressBar value={45} color="secondary" text="Twitter (40k)" />
-            <MatxProgressBar value={75} color="primary" text="Facebook (80k)" />
+            <MatxProgressBar value={75} color="primary" text="Sasol (102k)" />
+            <MatxProgressBar value={45} color="secondary" text="Pick n Pay (40k)" />
+            <MatxProgressBar value={75} color="primary" text="FGA Assets (80k)" />
 
             <H6 fontSize={16} mt={2} mb={1}>
               Yesterday
             </H6>
 
-            <MatxProgressBar value={75} color="primary" text="Google (102k)" />
-            <MatxProgressBar value={45} color="secondary" text="Twitter (40k)" />
-            <MatxProgressBar value={75} color="primary" text="Facebook (80k)" />
+            <MatxProgressBar value={75} color="primary" text="FGA Assets (102k)" />
+            <MatxProgressBar value={45} color="secondary" text="Gold (40k)" />
+            <MatxProgressBar value={75} color="primary" text="Sasol (80k)" />
 
             <H6 fontSize={16} mt={2} mb={1}>
               2 Days Ago
             </H6>
 
-            <MatxProgressBar value={75} color="primary" text="Google (102k)" />
-            <MatxProgressBar value={45} color="secondary" text="Twitter (40k)" />
-            <MatxProgressBar value={75} color="primary" text="Facebook (80k)" />
+            <MatxProgressBar value={75} color="primary" text="Sasol (102k)" />
+            <MatxProgressBar value={45} color="secondary" text="Rty Trade  (40k)" />
+            <MatxProgressBar value={75} color="primary" text="Gold (80k)" />
 
             <H6 fontSize={16} mt={2} mb={1}>
               7 Days Ago
             </H6>
 
-            <MatxProgressBar value={75} color="primary" text="Google (102k)" />
-            <MatxProgressBar value={45} color="secondary" text="Twitter (40k)" />
-            <MatxProgressBar value={75} color="primary" text="Facebook (80k)" />
+          
           </Card>
         </Grid>
       </Grid>

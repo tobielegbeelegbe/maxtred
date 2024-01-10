@@ -10,7 +10,7 @@ const StatCard3 = () => {
     },
     {
       icon: "location_on_outlined",
-      amount: 300942,
+      amount: 'R 1,940,000',
       title: "Adjusted Budget",
     },
     {
@@ -18,11 +18,7 @@ const StatCard3 = () => {
       amount: 45269,
       title: "New Assets",
     },
-    {
-      icon: "card_giftcard",
-      amount: 74265,
-      title: "Total Incidents",
-    },
+  
   ];
   const { palette } = useTheme();
   const textMuted = palette.text.secondary;
@@ -31,8 +27,8 @@ const StatCard3 = () => {
     <div>
       <Grid container spacing={3}>
         {statList.map((item, ind) => (
-          <Grid key={item.title} item md={3} sm={6} xs={12}>
-            <Card elevation={3} sx={{ p: "20px", display: "flex" }}>
+          <Grid key={item.title} item md={4} sm={6} xs={12}>
+            <Card elevation={3} sx={{ p: "20px", display: "flex", backgroundImage: `url("https://via.placeholder.com/500")` }}>
               <div>
                 <IconButton
                   size="small"

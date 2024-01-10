@@ -100,6 +100,14 @@ const Layout1Topbar = () => {
     updateSidebarMode({ mode });
   };
 
+  const handleMailClick = () => {
+    navigate("/inbox");
+  };
+
+  const handleCalClick = () => {
+    navigate("/calendar");
+  };
+
   return (
     <TopbarRoot>
       <TopbarContainer>
@@ -108,12 +116,12 @@ const Layout1Topbar = () => {
             <Icon>menu</Icon>
           </StyledIconButton>
 
-          <IconBox>
-            <StyledIconButton>
+          <IconBox >
+            <StyledIconButton onClick={handleMailClick}> 
               <Icon>mail_outline</Icon>
             </StyledIconButton>
 
-            <StyledIconButton>
+            <StyledIconButton onClick={handleCalClick}>
               <Icon>web_asset</Icon>
             </StyledIconButton>
 
@@ -137,7 +145,7 @@ const Layout1Topbar = () => {
                   Hi <strong>{user.name}</strong>
                 </Span>
 
-                <Avatar src={user.avatar} />
+                <Avatar src="/assets/images/face-7.jpg" />
               </UserMenu>
             }
           >

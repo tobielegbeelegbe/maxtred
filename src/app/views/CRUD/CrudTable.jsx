@@ -18,7 +18,8 @@ import ConfirmationDialog from "app/components/ConfirmationDialog";
 import { themeShadows } from "app/components/MatxTheme/themeColors";
 import MemberEditorDialog from "./MemberEditorDialog";
 import { deleteUser, getAllUser } from "./TableService";
-
+import { FlexBetween } from "app/components/FlexBox";
+import {H3} from "app/components/Typography";
 const Container = styled("div")(({ theme }) => ({
   margin: "30px",
   [theme.breakpoints.down("sm")]: { margin: "16px" },
@@ -86,16 +87,19 @@ const CrudTable = () => {
   return (
     <Container>
       <div className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "CRUD Table" }]} />
+        <Breadcrumb routeSegments={[{ name: "Programs" }]} />
       </div>
-
+      <FlexBetween mb={2}>
+        <H3 sx={{ m: 0 }}>Programs Overview</H3>
+        
+      </FlexBetween>
       <Button
         sx={{ mb: 2 }}
         color="primary"
         variant="contained"
         onClick={() => setShouldOpenEditorDialog(true)}
       >
-        Add New Member
+        Add New Program
       </Button>
 
       <Card sx={{ width: "100%", overflow: "auto" }} elevation={6}>
@@ -103,7 +107,7 @@ const CrudTable = () => {
           <TableHead>
             <TableRow>
               <TableCell>Name</TableCell>
-              <TableCell>Age</TableCell>
+              <TableCell>Budget</TableCell>
               <TableCell>Balance</TableCell>
               <TableCell>Company</TableCell>
               <TableCell>Status</TableCell>
@@ -119,10 +123,10 @@ const CrudTable = () => {
                 </TableCell>
 
                 <TableCell sx={{ px: 0 }} align="left">
-                  {user.age}
+                 R {user.age}
                 </TableCell>
 
-                <TableCell sx={{ px: 0 }}>${user.balance}</TableCell>
+                <TableCell sx={{ px: 0 }}>R {user.balance}</TableCell>
 
                 <TableCell sx={{ px: 0 }} align="left">
                   {user.company}

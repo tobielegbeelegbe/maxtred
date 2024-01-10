@@ -9,29 +9,30 @@ export const navigations = [
   },
   {
     name: "Projects",
-    path: "/dashboard/analytics",
+    path: "/dashboard/projects",
     icon: "analytics",
     auth: authRoles.admin, // ONLY SUPER ADMIN(SA) AND ADMIN CAN ACCESS
   },
 
+  { name: "Programs", icon: "format_list_bulleted", path: "/programs" },
   {
     name: "Assets",
-    path: "/dashboard/analytics-2",
+    path: "/dashboard/assets",
     icon: "work",
   },
 
   {
     name: "Budgets",
-    path: "/dashboard/alternative",
+    path: "/dashboard/budget",
     icon: "attach_money",
   },
   {
     name: "Incidents",
-    path: "/dashboard/inventory-management",
+    path: "/dashboard/incidents",
     icon: "info_outline",
   },
   {
-    name: "Roads",
+    name: "Risk Management",
     path: "/dashboard/sales",
     icon: "local_gas_station",
   },
@@ -110,7 +111,7 @@ export const navigations = [
   { name: "Chat", icon: "chat", path: "/chat" },
   { name: "Inbox", icon: "inbox", path: "/inbox" },
   { name: "Weather", icon: "wb_cloudy", path: "/todo/list" },
-  { name: "CRUD Table", icon: "format_list_bulleted", path: "/crud-table" },
+ 
 
   // { label: "Tables", type: "label" },
   // {
