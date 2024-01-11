@@ -2,7 +2,7 @@ import React from "react";
 import Chart from "react-apexcharts";
 
 const InventoryLineChart = () => {
-  const series = [{ name: "Sale", data: [14, 29, 18, 20, 20, 40, 20, 30, 24, 18, 30, 15] }];
+  const series = [{ name: "Incidents", data: [14, 29, 18, 20, 20, 40, 20, 30, 24, 18, 30, 15] }];
 
   return <Chart options={options} series={series} type="line" height={400} />;
 };

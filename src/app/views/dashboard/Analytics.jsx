@@ -1,15 +1,12 @@
 import { Card, Grid, styled, useTheme } from "@mui/material";
 import { Fragment } from "react";
-import Campaigns from "./shared/Campaigns";
 import DoughnutChart from "./shared/Doughnut";
 import ModifiedAreaChart from "./shared/ModifiedAreaChart";
-import RowCards from "./shared/RowCards";
+
 import StatCards from "./shared/StatCards";
 import StatCards2 from "./shared/StatCards2";
 import TopSellingTable from "./shared/TopSellingTable";
-import UpgradeCard from "./shared/UpgradeCard";
-import { FlexBetween } from "app/components/FlexBox";
-import {H3} from "app/components/Typography";
+
 import FollowerCard2 from "./shared/FollowerCard2";
 
 const AnalyticsRoot = styled("div")(({ theme }) => ({
@@ -39,13 +36,6 @@ const Header = styled(Title)(() => ({
   color: "rgba(255, 255, 255, 0.87)",
 }));
 
-const H4 = styled("h4")(({ theme }) => ({
-  fontSize: "1rem",
-  fontWeight: "500",
-  marginBottom: "16px",
-  textTransform: "capitalize",
-  color: theme.palette.text.secondary,
-}));
 
 const Analytics = () => {
   const { palette } = useTheme();

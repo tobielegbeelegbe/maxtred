@@ -49,7 +49,7 @@ const StatCards = () => {
               <Icon className="icon">{item.icon}</Icon>
               <Box ml="12px">
                 <Small color="Red">{item.name}</Small>
-                <Heading color="green">{item.amount}</Heading>
+                <Heading>{item.amount}</Heading>
               </Box>
             </ContentBox>
 

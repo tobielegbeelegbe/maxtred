@@ -11,10 +11,10 @@ const StyledCard = styled(Card)(() => ({
 
 const StatCard5 = () => {
   const statList = [
-    { icon: "card_giftcard", amount: 10495, title: "TO BE PACKED" },
-    { icon: "local_shipping", amount: 30942, title: "TO BE SHIPPED" },
-    { icon: "assignment_turned_in", amount: 45269, title: "TO BE DELIVERED" },
-    { icon: "assignment", amount: 20965, title: "TO BE INVOICED" },
+    { icon: "card_giftcard", amount: 10495, title: "NEW INCIDENTS" },
+    { icon: "local_shipping", amount: 30942, title: "PENDING INCIDENTS" },
+    { icon: "assignment_turned_in", amount: 45269, title: "OVERDUE INCIDENTS" },
+    { icon: "assignment", amount: 20965, title: "DOCUMENTS UPLOADED" },
   ];
 
   const { palette } = useTheme();

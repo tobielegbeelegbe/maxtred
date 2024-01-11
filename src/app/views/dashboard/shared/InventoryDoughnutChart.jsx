@@ -3,14 +3,14 @@ import { convertHexToRGB } from "app/utils/utils";
 import Chart from "react-apexcharts";
 
 const InventoryDoughnutChart = () => {
-  const series = [75, 50, 25];
+  const series = [234, 123, 3425];
   const { palette } = useTheme();
   const primary = palette.primary.main;
   const secondary = palette.secondary.main;
   const error = palette.error.main;
 
   const option = {
-    labels: ["Available", "Low Stock", "Out of Stock"],
+    labels: ["Gauteng", "Pretoria", "Cape Town"],
     stroke: { width: 0 },
     colors: [
       `rgba(${convertHexToRGB(primary)}, 1)`,
