@@ -54,7 +54,7 @@ export const navigations = [
     name: "Incidents",
     icon: "list",
 
-    children: [{ name: "View", path: "/matx-list", iconText: "L" },
+    children: [{ name: "View", path: "/incidents", iconText: "L" },
               { name: "Upload Report", path: "/forms/upload", iconText: "U" },
   ],
   },

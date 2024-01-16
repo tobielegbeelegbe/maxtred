@@ -98,7 +98,9 @@ const GridView = ({ list = [], sliderValue }) => {
               <Box py={1} className="grid__card-bottom">
                 <Paragraph>{item.projectName}</Paragraph>
                 <Small sx={{ display: "none" }}>{item.date}</Small>
-                <Small sx={{ display: "block" }}>{item.email}</Small>
+                <Small sx={{ display: "block" }}>User:{item.email}</Small>
+                <Small sx={{ display: "block",color:"red" }}>Cost: R20,000</Small>
+                <Small sx={{ display: "block", color:"green" }}>Status:Opened</Small>
               </Box>
             </CardRoot>
           </Grid>
