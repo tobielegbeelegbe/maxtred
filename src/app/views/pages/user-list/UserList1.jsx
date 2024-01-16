@@ -58,7 +58,7 @@ const UserList1 = () => {
   return (
     <Container>
       <div className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "Pages", path: "/pages" }, { name: "User List 1" }]} />
+        <Breadcrumb routeSegments={[{ name: "Dashoard", path: "/pages" }, { name: "Project List" }]} />
       </div>
 
       <Grid container spacing={3}>
@@ -70,25 +70,26 @@ const UserList1 = () => {
                   <Avatar src={user.imgUrl} sx={{ width: 48, height: 48 }} />
 
                   <Box ml={2}>
-                    <H5>{user.name}</H5>
-                    <StyledP sx={{ mt: 1, fontWeight: "normal", textTransform: "capitalize" }}>
+                    <H5 color= "blue">{user.name}</H5>
+                    <StyledP sx={{ mt: 1, fontWeight: "normal", textTransform: "capitalize", color: "red" }} >
                       {user.company?.toLowerCase()}
                     </StyledP>
+                    <StyledP sx={{ mt: 1, fontWeight: "normal", textTransform: "capitalize" }}>
+                    
+                     Leader:  Thomas Lesley
+                    </StyledP>
+                    
                   </Box>
                 </FlexBox>
 
                 <FlexBox m={1}>
-                  <GoogleButton>
-                    <GoogleIcon />
-                  </GoogleButton>
+                BUDGET
 
-                  <FacebookButton sx={{ mx: "4px" }}>
-                    <FacebookIcon />
-                  </FacebookButton>
+                  <h3 sx={{ mx: "4px" }}>
+                  R 250,000
+                  </h3>
 
-                  <TwitterButton>
-                    <Twitter />
-                  </TwitterButton>
+                  
                 </FlexBox>
               </FlexBetween>
 
@@ -106,10 +107,10 @@ const UserList1 = () => {
 
                 <Box m={1} display="flex">
                   <StyledButton size="small" sx={{ mr: "4px" }}>
-                    CHAT
+                    DETAILS
                   </StyledButton>
 
-                  <StyledButton size="small">PROFILE</StyledButton>
+                  <StyledButton size="small">BUDGET</StyledButton>
                 </Box>
               </ContentBox>
             </Card>

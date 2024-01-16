@@ -53,13 +53,13 @@ const UserProfileSidenav = () => {
       <Box py="12px" />
       <ContentBox>
         <Box flexGrow={1}>
-          <Paragraph>balance</Paragraph>
-          <H3>$ 20,495</H3>
+          <Paragraph>Reveue</Paragraph>
+          <H3>R 200,495</H3>
         </Box>
 
         <Box>
-          <Paragraph>points</Paragraph>
-          <H3>PT 3,000</H3>
+          <Paragraph> Budget</Paragraph>
+          <H3>R 300,000</H3>
         </Box>
         <div />
       </ContentBox>
@@ -91,20 +91,7 @@ const UserProfileSidenav = () => {
 
         <Box py="16px" />
 
-        <FlexAlignCenter color={textPrimary}>
-          <Button>
-            <Icon>sentiment_very_satisfied</Icon>
-            <H4
-              sx={{
-                ml: 4,
-                color: textPrimary,
-                fontWeight: "500",
-              }}
-            >
-              Upgrade to premium
-            </H4>
-          </Button>
-        </FlexAlignCenter>
+        
         <Box py="8px" />
       </Box>
     </SideNav>

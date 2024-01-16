@@ -142,7 +142,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
         <Grid item lg={8} md={8} sm={12} xs={12}>
           <Card sx={{ pb: 2 }}>
             <H3 sx={{ color: textMuted, padding: "16px", paddingBottom: 0, fontWeight: "normal" }}>
-              Data Use
+              Project Growth
             </H3>
             <ProfileBarChart height="260px" color={[palette.warn]} />
 
@@ -167,7 +167,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
 
         <Grid item lg={4} md={4} sm={12} xs={12}>
           <Card sx={{ p: 2, height: "100%" }}>
-            <H3 sx={{ color: textMuted, marginBottom: 3, fontWeight: "500" }}>Data Use</H3>
+            <H3 sx={{ color: textMuted, marginBottom: 3, fontWeight: "500" }}>Your Team</H3>
             <FlexBox mb={2}>
               <Badge badgeContent="New" color="primary">
                 <StyledFab textcolor={textPrimary} bgcolor={bgLightPrimary}>
@@ -312,33 +312,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
           </StyledCard2>
         </Grid>
 
-        <Grid item lg={4} md={4} sm={12} xs={12}>
-          <Card>
-            {paymentList.map((method, index) => (
-              <Fragment key={index}>
-                <FlexBetween py={2} px={3} flexWrap="wrap">
-                  <FlexBox flexWrap="wrap">
-                    <FlexBox
-                      width={64}
-                      height={52}
-                      justifyContent="center"
-                      sx={{ background: bgGrey }}
-                    >
-                      <IMG src={method.img} alt="master card" sx={{ height: 36 }} />
-                    </FlexBox>
-
-                    <Box ml={2}>
-                      <H4 sx={{ mb: "4px", fontWeight: "500" }}>{method.type}</H4>
-                      <Span sx={{ color: textMuted }}>{method.product}</Span>
-                    </Box>
-                  </FlexBox>
-                </FlexBetween>
-
-                {index !== paymentList.length - 1 && <Divider />}
-              </Fragment>
-            ))}
-          </Card>
-        </Grid>
+        
       </Grid>
       <Box py="8px" />
     </ProfileContent>
@@ -348,7 +322,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
 const projectSummery = [
   { title: "Project Created", amount: 11 },
   { title: "Project Completed", amount: 15 },
-  { title: "Project Published", amount: 25 },
+  { title: "Open Project", amount: 25 },
 ];
 
 const paymentList = [

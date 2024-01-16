@@ -10,7 +10,7 @@ const pageLayoutRoutes = [
     element: <LeftSidebarCard />,
   },
   {
-    path: "/page-layouts/user-profile",
+    path: "/page-layouts/profile",
     element: <UserProfile />,
   },
 ];
