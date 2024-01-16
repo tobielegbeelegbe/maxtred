@@ -7,50 +7,16 @@ export const navigations = [
     icon: "dashboard",
     auth: authRoles.sa, // ONLY SUPER ADMIN(SA) CAN ACCESS
   },
-  {
-    name: "Projects",
-    path: "/dashboard/projects",
-    icon: "analytics",
-    auth: authRoles.admin, // ONLY SUPER ADMIN(SA) AND ADMIN CAN ACCESS
-  },
-
-  { name: "Programs", icon: "format_list_bulleted", path: "/programs" },
-  {
-    name: "Assets",
-    path: "/dashboard/assets",
-    icon: "work",
-  },
-
-  {
-    name: "Budgets",
-    path: "/dashboard/budget",
-    icon: "attach_money",
-  },
-  {
-    name: "Incidents",
-    path: "/dashboard/incidents",
-    icon: "info_outline",
-  },
-  {
-    name: "Risk Management",
-    path: "/dashboard/sales",
-    icon: "local_gas_station",
-  },
-  {
-    name: "Reports",
-    path: "/dashboard/learning-management",
-    icon: "receipt",
-  },
-
+  
   { label: "Manage", type: "label" },
 
   {
     name: "Projects",
     icon: "people",
     children: [
-      { name: "Project List", path: "/pages/user-list-1", iconText: "U1" },
+      { name: "Project List", path: "/pages/projects", iconText: "U1" },
       { name: "Delete Project", path: "/pages/user-list-2", iconText: "U2" },
-      { name: "Create Project", path: "/pages/user-list-3", iconText: "U3" },
+      { name: "Create Project", path: "/pages/newprojects", iconText: "U3" },
       { name: "Adjust Project Budgets", path: "/pages/user-list-4", iconText: "U3" },
       { name: "Assig Project Leader", path: "/pages/user-list-4", iconText: "U3" },
     ],
@@ -76,7 +42,7 @@ export const navigations = [
   },
   
   {
-    name: "Users",
+    name: "Programs",
     icon: "people",
     children: [
       { name: "User List", path: "/pages/customer-list", iconText: "CL" },
@@ -92,17 +58,7 @@ export const navigations = [
               { name: "Upload Report", path: "/forms/upload", iconText: "U" },
   ],
   },
-  {
-    name: "Session/Auth",
-    icon: "security",
-    children: [
-      { name: "Sign in", iconText: "SI", path: "/session/signin" },
-      { name: "Sign up", iconText: "SU", path: "/session/signup" },
-      { name: "Forgot Password", iconText: "FP", path: "/session/forgot-password" },
-      { name: "Error", iconText: "404", path: "/session/404" },
-    ],
-  },
-  { name: "User Profile", path: "/page-layouts/user-profile", icon: "person" },
+  { name: "User Profile", path: "/page-layouts/profile", icon: "person" },
   { name: "Account", path: "/page-layouts/account", icon: "manage_accounts" },
 
   { label: "Apps", type: "label" },
@@ -127,21 +83,5 @@ export const navigations = [
 
   { name: "Map", icon: "add_location", path: "/map" },
 
-  { label: "Charts", type: "label" },
-  {
-    name: "Charts",
-    icon: "trending_up",
 
-    children: [
-      { name: "Echarts", path: "/charts/echarts", iconText: "E" },
-      { name: "Recharts", path: "/charts/recharts", iconText: "R" },
-      { name: "Apex Charts", path: "/charts/apex-charts", iconText: "A" },
-    ],
-  },
-  {
-    name: "Documentation",
-    icon: "launch",
-    type: "extLink",
-    path: "http://demos.ui-lib.com/matx-react-doc/",
-  },
 ];
