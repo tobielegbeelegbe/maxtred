@@ -40,9 +40,9 @@ const Footer = () => {
       <AppBar color="primary" position="static" sx={{ zIndex: 96 }}>
         <AppFooter>
           <FooterContent>
-            <a href="https://ui-lib.com/downloads/matx-pro-react-admin/">
+            <a href="https://octopus-app-uukkb.ondigitalocean.app/">
               <Button variant="contained" color="secondary">
-                View User
+                View Admi
               </Button>
             </a>
 
