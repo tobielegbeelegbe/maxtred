@@ -15,29 +15,23 @@ export const navigations = [
     icon: "people",
     children: [
       { name: "Project List", path: "/pages/projects", iconText: "U1" },
-      { name: "Delete Project", path: "/pages/user-list-2", iconText: "U2" },
+      { name: "Delete Project", path: "/pages/delete-project", iconText: "U2" },
       { name: "Create Project", path: "/pages/newprojects", iconText: "U3" },
-      { name: "Adjust Project Budgets", path: "/pages/user-list-4", iconText: "U3" },
-      { name: "Assig Project Leader", path: "/pages/user-list-4", iconText: "U3" },
     ],
   },
   {
     name: "Assets",
     icon: "shopping_cart",
     children: [
-      { name: "Asset List", path: "/pages/product-list", iconText: "PL" },
-      { name: "Delete Asset", path: "/pages/view-product", iconText: "VP" },
+      { name: "Asset List", path: "/pages/Asset-list", iconText: "PL" },
       { name: "Create Asset", path: "/pages/new-product", iconText: "NP" },
-      { name: "Assig Asset", path: "/pages/new-product", iconText: "NP" },
     ],
   },
   {
     name: "Budgets",
     icon: "folder",
     children: [
-      { name: "Budgets List", path: "/pages/order-list", iconText: "OL" },
-      { name: "Adjust Budgets", path: "/invoice/fdskfjdsuoiucrwevbgd", iconText: "VO" },
-      { name: "Create Budgets", path: "/invoice/fdskfjdsuoiucrwevbgd", iconText: "VO" },
+      { name: "Budgets List", path: "/pages/budget-list", iconText: "OL" },
     ],
   },
   
@@ -45,9 +39,8 @@ export const navigations = [
     name: "Programs",
     icon: "people",
     children: [
-      { name: "User List", path: "/pages/customer-list", iconText: "CL" },
-      { name: "Project Leaders", path: "/pages/view-customer", iconText: "VC" },
-      { name: "New User", path: "/pages/new-customer", iconText: "NC" },
+      { name: "Program List", path: "/pages/customer-list", iconText: "CL" },
+      { name: "New Program", path: "/pages/new-customer", iconText: "NC" },
     ],
   },
   {

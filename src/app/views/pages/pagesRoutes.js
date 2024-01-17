@@ -17,7 +17,7 @@ const CustomerViewer = Loadable(lazy(() => import("./customers/customer-viewer/C
 
 const pagesRoutes = [
   { path: "/pages/projects", element: <UserList1 /> },
-  { path: "/pages/user-list-2", element: <UserList2 /> },
+  { path: "/pages/delete-project", element: <UserList2 /> },
   { path: "/pages/user-list-3", element: <UserList3 /> },
   { path: "/pages/user-list-4", element: <UserList4 /> },
   { path: "/pages/faq-1", element: <Faq1 /> },
@@ -25,10 +25,10 @@ const pagesRoutes = [
   { path: "/pages/customer-list", element: <CustomerList /> },
   { path: "/pages/newprojects", element: <CustomerForm /> },
   { path: "/pages/view-customer", element: <CustomerViewer /> },
-  { path: "/pages/product-list", element: <ProductList /> },
+  { path: "/pages/Asset-list", element: <ProductList /> },
   { path: "/pages/new-product", element: <ProductForm /> },
-  { path: "/pages/view-product", element: <ProductViewer /> },
-  { path: "/pages/order-list", element: <OrderList /> },
+  { path: "/pages/view-project", element: <ProductViewer /> },
+  { path: "/pages/budget-list", element: <OrderList /> },
 ];
 
 export default pagesRoutes;

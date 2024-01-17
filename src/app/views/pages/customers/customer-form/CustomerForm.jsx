@@ -47,11 +47,11 @@ const CustomerForm = () => {
   return (
     <Container>
       <div className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "Pages", path: "/pages" }, { name: "New Customer" }]} />
+        <Breadcrumb routeSegments={[{ name: "Project", path: "/pages" }, { name: "New Project" }]} />
       </div>
 
       <Card elevation={3}>
-        <H4 p={2}>Add a New Customer</H4>
+        <H4 p={2}>Add a New Project</H4>
 
         <Divider sx={{ mb: 1 }} />
 

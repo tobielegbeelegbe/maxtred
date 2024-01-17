@@ -37,7 +37,7 @@ const ThumbImg = styled("img")({
 });
 
 const ProductViewer = () => {
-  const [selectedImage, setSelectedImage] = useState("/assets/images/laptop-2.png");
+  const [selectedImage, setSelectedImage] = useState("/assets/images/1.png");
 
   const theme = useTheme();
 
@@ -71,22 +71,30 @@ const ProductViewer = () => {
           </Grid>
 
           <Grid item md={6} xs={12}>
-            <H4 sx={{ mt: 0, mb: 2 }}>Asus VivoBook X512FL-EJ723T 10th Gen Intel Core i5</H4>
+            <H4 sx={{ mt: 0, mb: 2 }}>Thuli Carbon Research Project</H4>
             <Paragraph sx={{ mt: 0, mb: 1, color: secondary }}>SKU: 0X50F0D</Paragraph>
 
             <Paragraph sx={{ mt: 0, mb: 2 }}>
-              <Span sx={{ color: secondary }}>BRAND: </Span>
-              <Span sx={{ color: primary }}>ASUS | More Laptop from ASUS</Span>
+              <Span sx={{ color: secondary }}>COMPANY: </Span>
+              <Span sx={{ color: primary }}>ITHOMA GROUPS</Span>
+            </Paragraph>
+
+            <Paragraph sx={{ mt: 0, mb: 2 }}>
+              <Span sx={{ color: secondary }}>PROJECT LEADER: </Span>
+              <Span sx={{ color: primary }}>Thomas Jeffery</Span>
+            </Paragraph>
+
+            <Paragraph sx={{ mt: 0, mb: 2 }}>
+              <Span sx={{ color: secondary }}>BUDGET: </Span>
+              <Span sx={{ color: primary }}>R 1,300,000</Span>
             </Paragraph>
 
             <Divider sx={{ mb: 2 }} />
 
-            <AddToCartButton propStyle={{ mb: 2 }} amount={0} />
-
             <Divider sx={{ mb: 2 }} />
 
             <Paragraph sx={{ mt: 0, mb: 1, color: secondary, fontWeight: "500" }}>
-              Have questions about this product (SKU: 0X2E615)
+              Want to report an incident
             </Paragraph>
 
             <CallBox>
@@ -98,21 +106,12 @@ const ProductViewer = () => {
 
             <Divider sx={{ mb: 2 }} />
 
-            <H4 sx={{ mt: 0, mb: 2 }}>Specification</H4>
+            <H4 sx={{ mt: 0, mb: 2 }}>Project Specification</H4>
 
             <p>
-              Brand ASUS Processor Intel Core i5-10210U 10th Gen CPU Cache 6MB Ram 4GB DDR4 Ram
-              Details 1 x 4 GB Non-Removable Expansion Ram Slot 1 Storage 512GB PCIE G3 SSD Display
-              15.6 FHD Antiglare LED Display Resolution 1920×1080 (WxH) FHD Optical Device No
-              Graphics Chipset Nvidia MX250 Graphics Graphics Memory 2GB Networking WiFi, Bluetooth,
-              Card Reader USB Port 1x USB 3.2 Gen 1 Type-A, 1x USB 3.2 Gen 1 Type-C Video Port HDMI
-              Audio Port Combo Finger Print Yes Keyboard Back-lit Yes Operating System Win-10 Home
-              Battery 2 Cell Li-Ion Power Adapter 65 W AC power adapter Specialty Finger Print
-              Sensor, Backlit Keyboard, Voice control with Cortana support, BIOS Booting User
-              Password Protection, Fingerprint sensor intergrated with Touchpad Others Backlit: LED
-              Backlit, OLED: LCD, Brightness: 200nits, Aspect ratio: 16:9, Color gamut NTSC: 45%,
-              Screen-to-body ratio: 88%, Output: 19V DC, 3.42A, 65W, Input: 100-240V AC 50/60Hz
-              universal Warranty 2 years
+              Across the world, cities are expanding rapidly in a race for space – with no clear finish line in sight. This is particularly true for African cities characterised by an ever-increasing, low-density urban footprint and growth shapes that are distinctly outwards-facing and often informal.
+
+With the urgent need for global cities to achieve net zero, this urban sprawl presents a major challenge to decarbonisation. Driven by short-term goals, the rapid development of low-cost locations in suburban peripheries has paved the way for inefficient city layouts. These types of urban configurations are increasing embodied carbon levels in the built environment, while distancing households from more sustainable transport options and locking inhabitants into carbon intensive lifestyles.
             </p>
           </Grid>
         </Grid>
@@ -122,8 +121,8 @@ const ProductViewer = () => {
 };
 
 const imageList = [
-  "/assets/images/laptop-1.png",
-  "/assets/images/laptop-2.png",
-  "/assets/images/laptop-3.png",
+  "/assets/images/1.png",
+  "/assets/images/4.png",
+  "/assets/images/3.png",
 ];
 export default ProductViewer;

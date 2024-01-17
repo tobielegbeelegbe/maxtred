@@ -11,7 +11,7 @@ const UserList2 = () => {
   return (
     <Container>
       <div className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "Pages", path: "/pages" }, { name: "User List 2" }]} />
+        <Breadcrumb routeSegments={[{ name: "Project", path: "/pages" }, { name: "Delete Project" }]} />
       </div>
 
       <Grid container spacing={3}>
@@ -32,9 +32,9 @@ const UserList2 = () => {
 
                 <Box m={1} display="flex">
                   <StyledButton size="small" sx={{ mr: "4px" }}>
-                    CHAT
+                    DELETE
                   </StyledButton>
-                  <StyledButton size="small">PROFILE</StyledButton>
+                  <StyledButton size="small">EDIT</StyledButton>
                 </Box>
               </FlexBetween>
             </Card>

@@ -14,6 +14,7 @@ import { FlexBetween, FlexBox } from "app/components/FlexBox";
 import { H5 } from "app/components/Typography";
 import useUsers from "app/hooks/useUsers";
 import { Container, StyledButton, StyledP } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 // styled components
 const StyledIonButton = styled(IconButton)({
@@ -54,6 +55,8 @@ const ContentBox = styled(FlexBetween)({
 
 const UserList1 = () => {
   const { users } = useUsers();
+
+const navigate = useNavigate();
 
   return (
     <Container>
@@ -106,7 +109,7 @@ const UserList1 = () => {
                 </Box>
 
                 <Box m={1} display="flex">
-                  <StyledButton size="small" sx={{ mr: "4px" }}>
+                  <StyledButton size="small" sx={{ mr: "4px" }} onClick={() => navigate("/pages/view-project")}>
                     DETAILS
                   </StyledButton>
 

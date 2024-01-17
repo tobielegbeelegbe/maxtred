@@ -105,11 +105,11 @@ const ProductList = () => {
   return (
     <Container>
       <div className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "Pages", path: "/pages" }, { name: "Product List" }]} />
+        <Breadcrumb routeSegments={[{ name: "Pages", path: "/pages" }, { name: "Asset List" }]} />
       </div>
 
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <TableToolbar title="All Products" numSelected={selected.length} />
+        <TableToolbar title="All Assets" numSelected={selected.length} />
 
         <TableContainer>
           <Table sx={{ minWidth: 750 }}>
@@ -145,7 +145,7 @@ const ProductList = () => {
 
                       <TableCell component="th" scope="row" padding="none">
                         <FlexBox gap={1}>
-                          <IMG src={row.imgUrl} alt="user" />
+                          
                           <H5 fontSize={15}>{row.name}</H5>
                         </FlexBox>
                       </TableCell>

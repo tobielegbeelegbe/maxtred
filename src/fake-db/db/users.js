@@ -8,7 +8,7 @@ const users = [
     isActive: false,
     balance: 2838.08,
     age: 30000,
-    name: "OIL AND GAS PROJECT",
+    name: "OIL AND GAS",
     leader: "Thomas Leasley",
     gender: "female",
     company: "ACIUM",
