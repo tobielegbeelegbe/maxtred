@@ -42,7 +42,7 @@ const Footer = () => {
           <FooterContent>
             <a href="https://octopus-app-uukkb.ondigitalocean.app/">
               <Button variant="contained" color="secondary">
-                View Admi
+                View Admin
               </Button>
             </a>
 
