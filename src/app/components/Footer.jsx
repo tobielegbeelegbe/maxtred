@@ -40,9 +40,9 @@ const Footer = () => {
       <AppBar color="primary" position="static" sx={{ zIndex: 96 }}>
         <AppFooter>
           <FooterContent>
-            <a href="https://octopus-app-uukkb.ondigitalocean.app/">
+            <a href="https://orca-app-xw5v5.ondigitalocean.app/">
               <Button variant="contained" color="secondary">
-                View Admin
+                View USer
               </Button>
             </a>
 
