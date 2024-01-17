@@ -40,7 +40,11 @@ const Footer = () => {
       <AppBar color="primary" position="static" sx={{ zIndex: 96 }}>
         <AppFooter>
           <FooterContent>
+<<<<<<< Updated upstream
             <a href="https://ui-lib.com/downloads/matx-pro-react-admin/">
+=======
+            <a href="https://orca-app-xw5v5.ondigitalocean.app/">
+>>>>>>> Stashed changes
               <Button variant="contained" color="secondary">
                 View User
               </Button>
