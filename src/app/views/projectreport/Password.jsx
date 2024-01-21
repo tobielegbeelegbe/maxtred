@@ -16,7 +16,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { FlexBetween } from "app/components/FlexBox";
 import { H5, Paragraph, Span } from "app/components/Typography";
-import { BodyTableCell, HeadTableCell } from "./StyledComponents";
+import { BodyTableCell, HeadTableCell } from "./common/StyledComponents";
 
 // styled components
 const EarningBoxWrapper = styled(FlexBetween)(({ theme }) => ({
@@ -74,36 +74,19 @@ const Statements = () => {
 
   return (
     <Card sx={{ pb: 2 }}>
-      <H5 padding={3}>Project Budget</H5>
+      <H5 padding={3}>2022 Statement</H5>
       <Divider />
 
-      <Box padding={3}>
-        <Paragraph>
-          Last <Span color="primary.main">15</Span> day earnings calculated
-        </Paragraph>
-
-        <EarningBoxWrapper flexWrap="wrap" pt={2}>
-          <StyledStack direction="row" flexWrap="wrap" spacing={2}>
-            {earningList.map((item) => (
-              <EarningBox key={item.id}>
-                <item.Icon sx={{ color: item.iconColor }} />
-                <H5 my={0.5}>${item.amount}</H5>
-                <Paragraph>{item.name}</Paragraph>
-              </EarningBox>
-            ))}
-          </StyledStack>
-
-          <Button variant="contained">Withdraw $4,550</Button>
-        </EarningBoxWrapper>
-      </Box>
+      
 
       <FlexBetween px={3} py={2}>
-        <H5>Statement</H5>
+        
 
         <Select value="2021" onChange={() => {}}>
-          <MenuItem value="2021">2021</MenuItem>
-          <MenuItem value="2020">2020</MenuItem>
-          <MenuItem value="2019">2019</MenuItem>
+          <MenuItem value="2021">First</MenuItem>
+          <MenuItem value="2020">Second</MenuItem>
+          <MenuItem value="2019">Third</MenuItem>
+          <MenuItem value="2019">Fourth</MenuItem>
         </Select>
       </FlexBetween>
 
@@ -120,7 +103,7 @@ const Statements = () => {
         <TableBody>
           {[1, 2, 3, 4, 5, 6].map((item) => (
             <TableRow key={item}>
-              <BodyTableCell>Jan 12, 2023</BodyTableCell>
+              <BodyTableCell>Jan 12, 2022</BodyTableCell>
               <BodyTableCell>202745788</BodyTableCell>
               <BodyTableCell>First Quarter Report</BodyTableCell>
               <BodyTableCell>

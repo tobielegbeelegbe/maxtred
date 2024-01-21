@@ -11,40 +11,93 @@ export const navigations = [
   { label: "Manage", type: "label" },
 
   {
-    name: "Projects",
+    name: "Construction Projects",
     icon: "people",
     children: [
       { name: "Project List", path: "/pages/projects", iconText: "U1" },
-      { name: "Delete Project", path: "/pages/delete-project", iconText: "U2" },
-      { name: "Create Project", path: "/pages/newprojects", iconText: "U3" },
+      { name: "Project Reports", path: "/page-layouts/projectreport", iconText: "U2" },
+      { name: "Budget and Cashflow", path: "/pages/newprojects", iconText: "U3" },
+      { name: "Programs", path: "/pages/newprojects", iconText: "U3" },
     ],
   },
   {
-    name: "Assets",
+    name: "Property Maintenance",
     icon: "shopping_cart",
     children: [
       { name: "Asset List", path: "/pages/Asset-list", iconText: "PL" },
+      { name: "Rental Register", path: "/pages/Asset-list", iconText: "PL" },
+      { name: "Rates and Taxes", path: "/pages/Asset-list", iconText: "PL" },
+      { name: "Reports", path: "/pages/Asset-list", iconText: "PL" },
       { name: "Create Asset", path: "/pages/new-product", iconText: "NP" },
     ],
   },
+ 
   {
-    name: "Budgets",
-    icon: "folder",
-    children: [
-      { name: "Budgets List", path: "/pages/budget-list", iconText: "OL" },
-    ],
-  },
-  
-  {
-    name: "Programs",
+    name: "Building Maintenance",
     icon: "people",
     children: [
       { name: "Program List", path: "/pages/customer-list", iconText: "CL" },
       { name: "New Program", path: "/pages/new-customer", iconText: "NC" },
     ],
   },
+
   {
-    name: "Incidents",
+    name: "EPWP",
+    icon: "folder",
+    children: [
+      
+      {
+        name: "Reports",
+        icon: "folder",
+        children: [
+          { name: "Construction", path: "/pages/budget-list", iconText: "OL" },
+          { name: "Social Sector", path: "/pages/budget-list", iconText: "OL" },
+          { name: "Non State", path: "/pages/budget-list", iconText: "OL" },
+          { name: "Enviromental and Culture", path: "/pages/budget-list", iconText: "OL" },
+          { name: "Infastructure", path: "/pages/budget-list", iconText: "OL" },
+        ],
+      },
+      
+      {
+        name: "Campaigns",
+        icon: "folder",
+        children: [
+          { name: "UWM Basket of Services Campaign", path: "/pages/budget-list", iconText: "OL" },
+          
+        ],
+      },
+
+      {
+        name: "Policies",
+        icon: "folder",
+        children: [
+          { name: "UWM Basket of Services Campaign", path: "/pages/budget-list", iconText: "OL" },
+          
+        ],
+      },
+
+      {
+        name: "Summits",
+        icon: "folder",
+        children: [
+          { name: "UWM Basket of Services Campaign", path: "/pages/budget-list", iconText: "OL" },
+          
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "TENDERS",
+    icon: "people",
+    children: [
+      { name: "Program List", path: "/pages/customer-list", iconText: "CL" },
+      { name: "New Program", path: "/pages/new-customer", iconText: "NC" },
+    ],
+  },
+  
+  {
+    name: "INCIDENTS",
     icon: "list",
 
     children: [{ name: "View", path: "/incidents", iconText: "L" },
@@ -57,7 +110,7 @@ export const navigations = [
   { label: "Apps", type: "label" },
 
   { name: "Calendar", icon: "date_range", path: "/calendar" },
-  { name: "Chat", icon: "chat", path: "/chat" },
+  { name: "Maintenace Ticket", icon: "chat", path: "/chat" },
   { name: "Inbox", icon: "inbox", path: "/inbox" },
   { name: "Weather", icon: "wb_cloudy", path: "/todo/list" },
  

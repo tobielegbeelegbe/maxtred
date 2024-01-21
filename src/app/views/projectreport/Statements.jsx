@@ -16,7 +16,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { FlexBetween } from "app/components/FlexBox";
 import { H5, Paragraph, Span } from "app/components/Typography";
-import { BodyTableCell, HeadTableCell } from "./StyledComponents";
+import { BodyTableCell, HeadTableCell } from "./common/StyledComponents";
 
 // styled components
 const EarningBoxWrapper = styled(FlexBetween)(({ theme }) => ({
@@ -74,7 +74,7 @@ const Statements = () => {
 
   return (
     <Card sx={{ pb: 2 }}>
-      <H5 padding={3}>Project Budget</H5>
+      <H5 padding={3}>Earnings</H5>
       <Divider />
 
       <Box padding={3}>
@@ -107,12 +107,13 @@ const Statements = () => {
         </Select>
       </FlexBetween>
 
-      <Table sx={{ minWidth: 300 }}>
+      <Table sx={{ minWidth: 800 }}>
         <TableHead sx={{ backgroundColor: "grey.100" }}>
           <TableRow>
             <HeadTableCell>Date</HeadTableCell>
-            <HeadTableCell>Report ID</HeadTableCell>
-            <HeadTableCell>Report Details</HeadTableCell>
+            <HeadTableCell>Order ID</HeadTableCell>
+            <HeadTableCell>Order Details</HeadTableCell>
+            <HeadTableCell>Amount</HeadTableCell>
             <HeadTableCell>Invoice</HeadTableCell>
           </TableRow>
         </TableHead>
@@ -120,9 +121,10 @@ const Statements = () => {
         <TableBody>
           {[1, 2, 3, 4, 5, 6].map((item) => (
             <TableRow key={item}>
-              <BodyTableCell>Jan 12, 2023</BodyTableCell>
+              <BodyTableCell>Nov 12, 2021</BodyTableCell>
               <BodyTableCell>202745788</BodyTableCell>
-              <BodyTableCell>First Quarter Report</BodyTableCell>
+              <BodyTableCell>The Icon of full icon set</BodyTableCell>
+              <BodyTableCell>$650</BodyTableCell>
               <BodyTableCell>
                 <Button variant="contained" disabled={item === 1} startIcon={<Download />}>
                   Download

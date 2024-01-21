@@ -2,6 +2,7 @@ import AuthGuard from "./auth/AuthGuard";
 import Redirect from "./auth/Redirect";
 import MatxLayout from "./components/MatxLayout/MatxLayout";
 import Account from "./views/account";
+import ProjectReport from "./views/projectreport";
 import calendarRoutes from "./views/calendar/CalendarRoutes";
 import chartsRoute from "./views/charts/ChartsRoute";
 import chatRoutes from "./views/chat-box/ChatRoutes";
@@ -50,6 +51,7 @@ const routes = [
       ...scrumBoardRoutes,
       ...todoRoutes,
       { path: "/page-layouts/account", element: <Account /> },
+      { path: "/page-layouts/projectreport", element: <ProjectReport /> },
     ],
   },
   ...sessionRoutes,
