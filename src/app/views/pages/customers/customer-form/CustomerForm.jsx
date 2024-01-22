@@ -53,7 +53,7 @@ const Statements = () => {
       id: 1,
       amount: 4508350,
       Icon: ShowChart,
-      name: "Net Earnings",
+      name: "Net Cashflow",
       iconColor: theme.palette.primary.main,
     },
     {
@@ -87,7 +87,7 @@ const Statements = () => {
             {earningList.map((item) => (
               <EarningBox key={item.id}>
                 <item.Icon sx={{ color: item.iconColor }} />
-                <H5 my={0.5}>R{item.amount}</H5>
+                <H5 my={0.5}>R {item.amount}</H5>
                 <Paragraph>{item.name}</Paragraph>
               </EarningBox>
             ))}
