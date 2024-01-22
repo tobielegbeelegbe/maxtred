@@ -11,8 +11,10 @@ const UserList4 = Loadable(lazy(() => import("./user-list/UserList4")));
 const ProductList = Loadable(lazy(() => import("./products/ProductList")));
 const ProductForm = Loadable(lazy(() => import("./products/ProductForm")));
 const CustomerList = Loadable(lazy(() => import("./customers/CustomerList")));
+const Emergency = Loadable(lazy(() => import("./customers/emai")));
 const ProductViewer = Loadable(lazy(() => import("./products/ProductViewer")));
 const CustomerForm = Loadable(lazy(() => import("./customers/customer-form/CustomerForm")));
+const Propertyrate = Loadable(lazy(() => import("./customers/propertyrates/PropertyRates")));
 const CustomerViewer = Loadable(lazy(() => import("./customers/customer-viewer/CustomerViewer")));
 
 const pagesRoutes = [
@@ -20,9 +22,11 @@ const pagesRoutes = [
   { path: "/pages/delete-project", element: <UserList2 /> },
   { path: "/pages/user-list-3", element: <UserList3 /> },
   { path: "/pages/user-list-4", element: <UserList4 /> },
-  { path: "/pages/faq-1", element: <Faq1 /> },
+  { path: "/pages/propreport", element: <Faq1 /> },
+  { path: "/pages/proprate", element: <Propertyrate /> },
   { path: "/pages/faq-2", element: <Faq2 /> },
   { path: "/pages/customer-list", element: <CustomerList /> },
+  { path: "/pages/emergency", element: <Emergency /> },
   { path: "/pages/newprojects", element: <CustomerForm /> },
   { path: "/pages/view-customer", element: <CustomerViewer /> },
   { path: "/pages/Asset-list", element: <ProductList /> },

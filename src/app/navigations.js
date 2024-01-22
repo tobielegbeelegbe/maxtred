@@ -26,8 +26,8 @@ export const navigations = [
     children: [
       { name: "Asset List", path: "/pages/Asset-list", iconText: "PL" },
       { name: "Rental Register", path: "/pages/Asset-list", iconText: "PL" },
-      { name: "Rates and Taxes", path: "/pages/Asset-list", iconText: "PL" },
-      { name: "Reports", path: "/pages/Asset-list", iconText: "PL" },
+      { name: "Rates and Taxes", path: "/pages/proprate", iconText: "PL" },
+      { name: "Reports", path: "/pages/propreport", iconText: "PL" },
       { name: "Create Asset", path: "/pages/new-product", iconText: "NP" },
     ],
   },
@@ -36,8 +36,8 @@ export const navigations = [
     name: "Building Maintenance",
     icon: "people",
     children: [
-      { name: "Emergency", path: "/pages/customer-list", iconText: "CL" },
-      { name: "Planned", path: "/pages/new-customer", iconText: "NC" },
+      { name: "Emergency", path: "/pages/emergency", iconText: "CL" },
+      { name: "Planned", path: "/pages/customer-list", iconText: "NC" },
     ],
   },
 

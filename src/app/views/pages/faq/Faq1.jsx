@@ -76,27 +76,15 @@ const Faq1 = () => {
   return (
     <Container>
       <div className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "Pages", path: "/faq" }, { name: "FAQ 1" }]} />
+        <Breadcrumb routeSegments={[{ name: "Pages", path: "/faq" }, { name: "Property Reports" }]} />
       </div>
 
       <FlexAlignCenter py={8} flexDirection="column">
-        <Heading>Hi, How can we help you?</Heading>
-        <Box sx={{ minWidth: 400 }}>
-          <TextField
-            fullWidth
-            size="small"
-            variant="outlined"
-            placeholder="Search knowledge base"
-            InputProps={{
-              startAdornment: <Search fontSize="small" />,
-              endAdornment: <StyledButton variant="contained">Search</StyledButton>,
-              style: { borderRadius: 300, paddingRight: 0 },
-            }}
-          />
-        </Box>
+        <Heading>Property Reports</Heading>
+        
       </FlexAlignCenter>
 
-      <StyledP>Or Browse by category</StyledP>
+      <StyledP>Browse by category</StyledP>
 
       <Box mb={4}>
         <FlexAlignCenter m={-1} flexWrap="wrap">
@@ -130,57 +118,122 @@ const Faq1 = () => {
 const categoryList = [
   {
     icon: "home",
-    title: "Getting Started",
+    title: "Property Report",
     questionList: [
       {
-        question: "How to install?",
-        answer: "Open command line in root directory of your project and type npm install",
+        question: "2023 Property Report",
+        answer: " 2023 Property Report .pdf",
       },
       {
-        question: "How to debug?",
+        question: "2022 Property Report",
         answer:
-          "Delete node_modules from your project folder. Open command line in root directory of your project and type npm install",
+          " 2022 Property Report .pdf",
+      },
+      {
+        question: "2021 Property Report",
+        answer:
+          " 2021 Property Report .pdf",
+      },
+      {
+        question: "2020 Property Report",
+        answer:
+          " 2020 Property Report .pdf",
+      },
+      {
+        question: "2019 Property Report",
+        answer:
+          " 2019 Property Report .pdf",
+      },
+      {
+        question: "2018 Property Report",
+        answer:
+          " 2018 Property Report .pdf",
+        
       },
     ],
   },
   {
     icon: "layers",
-    title: "Plans & Pricing",
+    title: "Asset Report",
     questionList: [
       {
-        question: "What's the price?",
-        answer: "$2356",
+        question: "2023 Asset Report",
+        answer: " 2023 Asset Report .pdf",
       },
       {
-        question: "How long will I get suppot?",
-        answer: "Life time support",
+        question: "2022 Asset Report",
+        answer:
+          " 2022 Asset Report .pdf",
+      },
+      {
+        question: "2021 Asset Report",
+        answer:
+          " 2021 Asset Report .pdf",
+      },
+      {
+        question: "2020 Asset Report",
+        answer:
+          " 2020 Asset Report .pdf",
+      },
+      {
+        question: "2019 Asset Report",
+        answer:
+          " 2019 Asset Report .pdf",
+      },
+      {
+        question: "2018 Asset Report",
+        answer:
+          " 2018 Asset Report .pdf",
+        
       },
     ],
   },
   {
     icon: "contact_support",
-    title: "Sales Questions",
+    title: "Rental Report",
     questionList: [
       {
-        question: "When are you availabe?",
-        answer: "Monday to Friday from 10:00am to 6pm EST",
+        question: "2023 Rental Report",
+        answer: " 2023 Rental Report .pdf",
       },
       {
-        question: "When are you availabe?",
-        answer: "Monday to Friday from 10:00am to 6pm EST",
+        question: "2022 Rental Report",
+        answer:
+          " 2022 Rental Report .pdf",
+      },
+      {
+        question: "2021 Rental Report",
+        answer:
+          " 2021 Rental Report .pdf",
+      },
+      {
+        question: "2020 Rental Report",
+        answer:
+          " 2020 Rental Report .pdf",
+      },
+      {
+        question: "2019 Rental Report",
+        answer:
+          " 2019 Rental Report .pdf",
+      },
+      {
+        question: "2018 Rental Report",
+        answer:
+          " 2018 Rental Report .pdf",
+        
       },
     ],
   },
   {
     icon: "360",
-    title: "Usage Guide",
+    title: "Documents",
     questionList: [
       {
-        question: "How to install in Mac?",
+        question: "Lease Agreement",
         answer: "Open command line in your project's root directory and type yarn and hit enter",
       },
       {
-        question: "How to install in Mac?",
+        question: "Occupants Documents",
         answer: "Open command line in your project's root directory and type yarn and hit enter",
       },
     ],

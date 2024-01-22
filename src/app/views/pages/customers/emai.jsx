@@ -26,7 +26,7 @@ const Container = styled("div")(({ theme }) => ({
   },
 }));
 
-const CustomerList = () => {
+const Emergency = () => {
   const {
     page,
     order,
@@ -72,12 +72,12 @@ const CustomerList = () => {
     <Container>
       <div className="breadcrumb">
         <Breadcrumb
-          routeSegments={[{ name: "Pages", path: "/pages" }, { name: "Planned" }]}
+          routeSegments={[{ name: "Pages", path: "/pages" }, { name: "Emergency" }]}
         />
       </div>
 
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <TableToolbar title="Planned Maintenance" numSelected={selected.length} />
+        <TableToolbar title="Emergency Maintenance" numSelected={selected.length} />
 
         <TableContainer>
           <Table sx={{ minWidth: 750 }}>
@@ -154,4 +154,4 @@ const CustomerList = () => {
   );
 };
 
-export default CustomerList;
+export default Emergency;

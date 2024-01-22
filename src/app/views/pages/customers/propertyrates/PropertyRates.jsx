@@ -77,7 +77,7 @@ const Statements = () => {
 
       
       
-      <H5 padding={3}>Project Budget</H5>
+      <H5 padding={3}>Property Rates and Taxes</H5>
       <Divider />
 
       <Box padding={3}>
