@@ -51,22 +51,22 @@ const Statements = () => {
   const earningList = [
     {
       id: 1,
-      amount: 4550,
+      amount: 4508350,
       Icon: ShowChart,
       name: "Net Earnings",
       iconColor: theme.palette.primary.main,
     },
     {
       id: 2,
-      amount: 80,
-      name: "Change",
+      amount: 800000,
+      name: "Budget",
       Icon: DonutLarge,
       iconColor: theme.palette.warning.main,
     },
     {
       id: 3,
-      amount: 2800,
-      name: "Fees",
+      amount: 28000,
+      name: "Taxes",
       Icon: ReceiptOutlined,
       iconColor: theme.palette.info.main,
     },
@@ -79,7 +79,7 @@ const Statements = () => {
 
       <Box padding={3}>
         <Paragraph>
-          Last <Span color="primary.main">15</Span> day earnings calculated
+          Last <Span color="primary.main">30</Span> days Cashflow calculated
         </Paragraph>
 
         <EarningBoxWrapper flexWrap="wrap" pt={2}>
@@ -87,13 +87,13 @@ const Statements = () => {
             {earningList.map((item) => (
               <EarningBox key={item.id}>
                 <item.Icon sx={{ color: item.iconColor }} />
-                <H5 my={0.5}>${item.amount}</H5>
+                <H5 my={0.5}>R{item.amount}</H5>
                 <Paragraph>{item.name}</Paragraph>
               </EarningBox>
             ))}
           </StyledStack>
 
-          <Button variant="contained">Withdraw $4,550</Button>
+          <Button variant="contained">Balance R 4,300,550</Button>
         </EarningBoxWrapper>
       </Box>
 
@@ -113,7 +113,7 @@ const Statements = () => {
             <HeadTableCell>Date</HeadTableCell>
             <HeadTableCell>Report ID</HeadTableCell>
             <HeadTableCell>Report Details</HeadTableCell>
-            <HeadTableCell>Invoice</HeadTableCell>
+            <HeadTableCell>Download</HeadTableCell>
           </TableRow>
         </TableHead>
 
@@ -122,7 +122,7 @@ const Statements = () => {
             <TableRow key={item}>
               <BodyTableCell>Jan 12, 2023</BodyTableCell>
               <BodyTableCell>202745788</BodyTableCell>
-              <BodyTableCell>First Quarter Report</BodyTableCell>
+              <BodyTableCell>First Quarter Cashflow</BodyTableCell>
               <BodyTableCell>
                 <Button variant="contained" disabled={item === 1} startIcon={<Download />}>
                   Download

@@ -36,8 +36,8 @@ export const navigations = [
     name: "Building Maintenance",
     icon: "people",
     children: [
-      { name: "Program List", path: "/pages/customer-list", iconText: "CL" },
-      { name: "New Program", path: "/pages/new-customer", iconText: "NC" },
+      { name: "Emergency", path: "/pages/customer-list", iconText: "CL" },
+      { name: "Planned", path: "/pages/new-customer", iconText: "NC" },
     ],
   },
 
