@@ -8,7 +8,7 @@ const users = [
     isActive: false,
     balance: 2838.08,
     age: 30000,
-    name: "OIL AND GAS",
+    name: "Maqhekung Phase",
     leader: "Thomas Leasley",
     gender: "female",
     company: "ACIUM",
