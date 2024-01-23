@@ -82,7 +82,7 @@ const Layout2Topbar = () => {
             <NotificationBar2 />
             <ShoppingCart />
 
-            <MatxMenu menuButton={<UserProfile src={user.avatar} />}>
+            <MatxMenu menuButton={<UserProfile src="/assets/images/face-7.jpg" />}>
               <StyledItem>
                 <Icon> home </Icon>
                 <Span sx={{ pl: 2 }}> Home </Span>

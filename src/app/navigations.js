@@ -94,12 +94,12 @@ export const navigations = [
       { name: "New Program", path: "/pages/new-customer", iconText: "NC" },
     ],
   },
-  
+   { name: "Maintenace Ticket", icon: "chat", path: "https://tshizzles-tradi1.odoo.com/web#action=206&model=helpdesk.team&view_type=kanban&cids=1&menu_id=117" },
   {
     name: "INCIDENTS",
     icon: "list",
-
-    children: [{ name: "View", path: "/incidents", iconText: "L" },
+    path: "/love",
+    children: [{ name: "View", path: "https://demo.helpy.io/admin/topics", iconText: "L" },
               { name: "Upload Report", path: "/forms/upload", iconText: "U" },
   ],
   },
@@ -109,7 +109,7 @@ export const navigations = [
   { label: "Apps", type: "label" },
 
   { name: "Calendar", icon: "date_range", path: "/calendar" },
-  { name: "Maintenace Ticket", icon: "chat", path: "/chat" },
+ 
   { name: "Inbox", icon: "inbox", path: "/inbox" },
   { name: "Weather", icon: "wb_cloudy", path: "/todo/list" },
  

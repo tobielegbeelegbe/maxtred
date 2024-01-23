@@ -75,8 +75,8 @@ const ProductList = () => {
   const columns = [
     { id: "name", align: "left", disablePadding: true, label: "Name" },
     { id: "description", align: "center", disablePadding: false, label: "Description" },
-    { id: "quantity", align: "center", disablePadding: false, label: "Quantity" },
-    { id: "price", align: "center", disablePadding: false, label: "Price" },
+    { id: "quantity", align: "center", disablePadding: false, label: "2021" },
+    { id: "price", align: "center", disablePadding: false, label: "2022" },
     { id: "edit", align: "center", disablePadding: false, label: "Edit" },
   ];
 
@@ -152,9 +152,9 @@ const ProductList = () => {
 
                       <TableCell align="center">{row.description.substring(0, 30)}...</TableCell>
 
-                      <TableCell align="center">{renderChip(row.quantity)}</TableCell>
+                      <TableCell align="center">R {row.quantity}</TableCell>
 
-                      <TableCell align="center">{row.price}</TableCell>
+                      <TableCell align="center">R {row.price}</TableCell>
 
                       <TableCell align="center">
                         <IconButton onClick={() => navigate("/pages/new-product")}>

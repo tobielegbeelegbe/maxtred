@@ -6,12 +6,12 @@ const StatCard3 = () => {
     {
       icon: "people",
       amount: 10495,
-      title: "New Projects",
+      title: "Construction Projects",
     },
     {
       icon: "location_on_outlined",
       amount: 'R 1,940,000',
-      title: "Adjusted Budget",
+      title: "Adjusted CashFlow",
     },
     {
       icon: "keyboard_voice",
