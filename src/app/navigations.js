@@ -28,7 +28,6 @@ export const navigations = [
       { name: "Rental Register", path: "/pages/Asset-list", iconText: "PL" },
       { name: "Rates and Taxes", path: "/pages/proprate", iconText: "PL" },
       { name: "Reports", path: "/pages/propreport", iconText: "PL" },
-      { name: "Create Asset", path: "/pages/new-product", iconText: "NP" },
     ],
   },
  

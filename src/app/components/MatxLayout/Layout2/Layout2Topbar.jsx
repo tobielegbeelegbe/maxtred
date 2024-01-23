@@ -72,8 +72,8 @@ const Layout2Topbar = () => {
     <TopbarContainer>
       <TopbarRoot>
         <MatxLogo>
-          <IMG alt="company-logo" src="/assets/images/logo.svg" />
-          <StyledSpan>Matx</StyledSpan>
+          <IMG alt="company-logo" src="/assets/images/logo.png" />
+          <StyledSpan>EasyPro</StyledSpan>
         </MatxLogo>
 
         <Box display="flex" alignItems="center">
