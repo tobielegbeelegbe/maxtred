@@ -7,6 +7,7 @@ const Analytics2 = Loadable(lazy(() => import("./Analytics2")));
 const Analytics3 = Loadable(lazy(() => import("./Analytics3")));
 const Analytics4 = Loadable(lazy(() => import("./Analytics4")));
 const Incidents = Loadable(lazy(() => import("./InventoryManagement")));
+const Lease = Loadable(lazy(() => import("./lease")));
 const LearningManagement = Loadable(lazy(() => import("./LearningManagement")));
 const Sales = Loadable(lazy(() => import("./Sales")));
 

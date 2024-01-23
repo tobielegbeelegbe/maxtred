@@ -25,7 +25,7 @@ export const navigations = [
     icon: "shopping_cart",
     children: [
       { name: "Asset List", path: "/pages/Asset-list", iconText: "PL" },
-      { name: "Rental Register", path: "/pages/Asset-list", iconText: "PL" },
+      { name: "Rental Register", path: "/lease", iconText: "PL" },
       { name: "Rates and Taxes", path: "/pages/proprate", iconText: "PL" },
       { name: "Reports", path: "/pages/propreport", iconText: "PL" },
     ],

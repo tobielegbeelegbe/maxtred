@@ -9,6 +9,7 @@ import "./db/notification";
 import "./db/scrumBoard";
 import "./db/todos";
 import "./db/users";
+import "./db/register";
 import Mock from "./mock";
 
 Mock.onAny().passThrough();

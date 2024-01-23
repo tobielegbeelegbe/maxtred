@@ -23,7 +23,7 @@ import scrumBoardRoutes from "./views/scrum-board/ScrumBoardRoutes";
 import NotFound from "./views/sessions/NotFound";
 import sessionRoutes from "./views/sessions/SessionRoutes";
 import todoRoutes from "./views/todo/TodoRoutes";
-
+import RegisterRoute from "./views/register/RegisterRoute"
 const routes = [
   {
     element: (
@@ -42,6 +42,7 @@ const routes = [
       ...formsRoutes,
       ...invoiceRoutes,
       ...ListRoute,
+      ...RegisterRoute,
       ...mapRoutes,
       ...materialRoutes,
       ...inboxRoute,
