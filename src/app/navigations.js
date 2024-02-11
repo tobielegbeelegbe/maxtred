@@ -17,7 +17,7 @@ export const navigations = [
       { name: "Project List", path: "/pages/projects", iconText: "U1" },
       { name: "Project Reports", path: "/page-layouts/projectreport", iconText: "U2" },
       { name: "Budget and Cashflow", path: "/pages/newprojects", iconText: "U3" },
-      { name: "Programs", path: "/pages/newprojects", iconText: "U3" },
+      { name: "Programs", path: "/pages/newprojects", iconText: "U4" },
     ],
   },
   {
@@ -83,6 +83,11 @@ export const navigations = [
           
         ],
       },
+
+      { name: "Sector Coordination", path: "/pages/emergency", icon: "folder", iconText: "CL" },
+      { name: "Compliance Monitoring", path: "/pages/customer-list", icon: "folder", iconText: "NC" },
+      { name: "Innovation and Empowerment", path: "/pages/emergency", icon: "folder", iconText: "CL" },
+      { name: "Community Development", path: "/pages/customer-list", icon: "folder", iconText: "NC" },
     ],
   },
 
