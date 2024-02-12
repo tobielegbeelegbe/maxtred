@@ -87,7 +87,7 @@ export const navigations = [
       { name: "Sector Coordination", path: "/pages/emergency", icon: "folder", iconText: "CL" },
       { name: "Compliance Monitoring", path: "/pages/customer-list", icon: "folder", iconText: "NC" },
       { name: "Innovation and Empowerment", path: "/pages/emergency", icon: "folder", iconText: "CL" },
-      { name: "Community Development", path: "/pages/customer-list", icon: "folder", iconText: "NC" },
+      { name: "Community Development", path: "/pages/customer-list", icon: "text", iconText: "NC" },
     ],
   },
 
